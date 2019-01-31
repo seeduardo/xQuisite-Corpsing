@@ -66,11 +66,18 @@
   height: 15em;
   /* border: 2.5px solid white */
 }
+
+.organ-blowup {
+  max-width:100%;
+  vertical-align:bottom;
+}
 /*
 .popup:hover {
   opacity: 1;
-}
+/* }
 
+ */
+/*
 .popup::after {
   content: '';
   position: absolute;

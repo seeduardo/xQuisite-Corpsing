@@ -6,19 +6,24 @@ import Organ from './Organ'
 class App extends Component {
 
   state = {
-    organClicked: false
+    organIsClicked: false,
+    clickedOrgan: ''
   }
 
   handleOrganClick = (organ) => {
-    alert(organ.organ)
+    let clickedOrgan = organ;
+    this.setState({
+      organIsClicked: !this.state.organIsClicked,
+      clickedOrgan: clickedOrgan
+    })
   }
 
   render() {
     return (
       <div className="App">
         {
-          this.state.organClicked
-          ? <Organ />
+          this.state.organIsClicked
+          ? <Organ organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
           : <FloatingMan handleOrganClick={this.handleOrganClick}/>
         }
       </div>

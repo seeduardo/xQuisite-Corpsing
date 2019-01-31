@@ -91,7 +91,7 @@ class HotSpot extends Component {
                    ? {bottom: organ.bottom + 50, left: organ.left + 50, visibility: "visible", opacity: this.state.popupOpacity}
                    : null
             }><p>{organ.title}</p>
-              <img onClick={() => handleOrganClick(this.props.organ)} src={organ.image} alt={organ.organ}/>
+              <img onClick={() => handleOrganClick(this.props.organ)} src={organ.thumbnail} alt={organ.organ}/>
               <p>{organ.quotation}</p>
              </div>
 
