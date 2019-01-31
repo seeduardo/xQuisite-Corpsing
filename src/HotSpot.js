@@ -5,21 +5,23 @@ import React, { Component } from 'react';
 class HotSpot extends Component {
 
   state = {
-    cursor: false,
+    cursorOverHotspot: false,
+    cursorOverPopup: false,
     showPopup: false,
-    popupOpacity: 0
+    popupOpacity: 0,
+
   }
 
-  truthifyCursor = () => {
+  truthifyCursorOverHotspot = () => {
     this.setState({
-      cursor: true
+      cursorOverHotspot: true
     },
     () => setTimeout(() => {
-      if (this.state.cursor) {
+      if (this.state.cursorOverHotspot) {
         this.setState({
           showPopup: true
         });
-        let fadeIn = setInterval(() => {this.state.popupOpacity <= 1 && this.state.cursor === true
+        let fadeIn = setInterval(() => {this.state.popupOpacity <= 1 && this.state.cursorOverHotspot === true
           ? this.setState({
             popupOpacity: this.state.popupOpacity + 0.025
             })
@@ -30,15 +32,46 @@ class HotSpot extends Component {
     )
   }
 
-  falsifyCursor = () => {
+  falsifyCursorOverHotspot = () => {
     this.setState({
-      cursor: false
+      cursorOverHotspot: false
     },
     () => setTimeout(() => {
-      if (this.state.cursor === false) {
+      if (this.state.cursorOverHotspot === false && this.state.cursorOverPopup === false) {
         this.setState({
           showPopup: false,
           popupOpacity: 0
+        })
+      } else if (this.state.cursorOverHotspot === false && this.state.cursorOverPopup === true) {
+        this.setState({
+          showPopup: true
+        })
+      }
+    }, 800)
+    )
+  }
+
+  truthifyCursorOverPopup = () => {
+    this.setState({
+      cursorOverPopup: true,
+    });
+    let fadeIn = setInterval(() => {this.state.popupOpacity <= 1 && this.state.cursorOverPopup === true
+      ? this.setState({
+        popupOpacity: this.state.popupOpacity + 0.025
+        })
+      : clearInterval(fadeIn)
+    }, 100)
+  }
+
+  falsifyCursorOverPopup = () => {
+    this.setState({
+      cursorOverPopup: false,
+    },
+    () => setTimeout(() => {
+      if (!this.state.cursorOverHotspot) {
+      this.setState({
+        showPopup:false,
+        popupOpacity: 0
         })
       }
     }, 800)
@@ -46,16 +79,20 @@ class HotSpot extends Component {
   }
 
   render() {
+    const {organ, handleOrganClick} = this.props
     return (
       <div>
-          <div className="HotSpot" onMouseEnter={this.truthifyCursor} onMouseLeave={this.falsifyCursor} style={{bottom: this.props.organ.bottom, left: this.props.organ.left}}></div>
+          <div className="HotSpot" onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{bottom: organ.bottom, left: this.props.organ.left}}></div>
           {
-            <div className="popup" style={this.state.showPopup
-              ? {bottom: this.props.organ.bottom + 50, left: this.props.organ.left + 50, visibility: "visible", opacity: this.state.popupOpacity}
-              : null
-            }><p>{this.props.organ.title}</p>
-              <img src={this.props.organ.image} alt={this.props.organ.organ}/>
-              <p>{this.props.organ.quotation}</p>
+            <div className="popup"
+                 onMouseEnter={this.truthifyCursorOverPopup}
+                 onMouseLeave={this.falsifyCursorOverPopup}
+                 style={this.state.showPopup
+                   ? {bottom: organ.bottom + 50, left: organ.left + 50, visibility: "visible", opacity: this.state.popupOpacity}
+                   : null
+            }><p>{organ.title}</p>
+              <img onClick={() => handleOrganClick(this.props.organ)} src={organ.image} alt={organ.organ}/>
+              <p>{organ.quotation}</p>
              </div>
 
           }

@@ -18,7 +18,7 @@ class FloatingMan extends Component {
           {
             this.state.initialData.map(
               organ => <HotSpot organ={organ} key={organ.id}
-
+                handleOrganClick={this.props.handleOrganClick}
               />
             )
           }
