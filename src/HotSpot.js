@@ -19,7 +19,7 @@ class HotSpot extends Component {
         this.setState({
           showPopup: true
         });
-        let fadeIn = setInterval(() => {this.state.popupOpacity <= 1
+        let fadeIn = setInterval(() => {this.state.popupOpacity <= 1 && this.state.cursor === true
           ? this.setState({
             popupOpacity: this.state.popupOpacity + 0.025
             })
@@ -41,7 +41,7 @@ class HotSpot extends Component {
           popupOpacity: 0
         })
       }
-    }, 500)
+    }, 800)
     )
   }
 
