@@ -1,14 +1,14 @@
 .App {
-  text-align: center;
+  background-color: black;
 }
-
+/*
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
+  /* animation: App-logo-spin infinite 20s linear; */
+  /* height: 40vmin; */
+/* }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,9 +16,92 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+} */
+
+.FloatingMan {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
 }
 
-.App-link {
+.HotSpot {
+  color: white;
+  position: relative;
+  z-index: 1;
+  opacity: 0.1;
+  transition: opacity 0.8s;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+}
+
+.HotSpot:hover {
+  opacity: 1;
+}
+
+.HotSpot::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  border: 2.5px solid white;
+  border-radius: 100%;
+  width: 50%;
+  height: 50%;
+}
+
+.popup {
+  visibility: hidden;
+  color: white;
+  position: relative;
+  z-index: 2;
+  /* opacity: 0.1; */
+  /* transition: opacity 3s; */
+  width: 15em;
+  height: 15em;
+  /* border: 2.5px solid white */
+}
+
+.popup:hover {
+  opacity: 1;
+}
+
+.popup::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+/* div.p {
+  font-size: 10px;
+  align-items: center;
+} */
+
+/*
+#brain {
+  left: 20px;
+  bottom: 715px;
+}
+
+#hand {
+  left: 165px;
+  bottom: 485px;
+}
+
+#gut {
+  left: -30px;
+  bottom: 600px;
+} */
+
+/* .App-link {
   color: #61dafb;
 }
 
@@ -29,4 +112,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
