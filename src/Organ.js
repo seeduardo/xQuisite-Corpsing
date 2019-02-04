@@ -11,29 +11,20 @@ class Organ extends Component {
   componentDidMount() {
     let fadeIn = setInterval(() => {this.state.organOpacity <= 1
       ? this.setState({
-        organOpacity: this.state.organOpacity + 0.01
+        organOpacity: this.state.organOpacity + 0.008
         })
       : clearInterval(fadeIn)
-    }, 100)
+    }, 20)
   }
 
-  // fadeOut = () => {
-  //   let fadeOut = setInterval(() => {this.state.organOpacity > 0
-  //     ? this.setState({
-  //       organOpacity: this.state.organOpacity - 0.01
-  //       })
-  //     : clearInterval(fadeOut)
-  //   }, 100)
-  // }
-  //
-  // componentWillUnmount() {
-  //   let fadeOut = setInterval(() => {this.state.organOpacity > 0
-  //     ? this.setState({
-  //       organOpacity: this.state.organOpacity - 0.01
-  //       })
-  //     : clearInterval(fadeOut)
-  //   }, 100)
-  // }
+  fadeOut = () => {
+    let fadeOut = setInterval(() => {this.state.organOpacity > 0
+      ? this.setState({
+        organOpacity: this.state.organOpacity - 0.008
+        })
+      : clearInterval(fadeOut)
+    }, 20)
+  }
 
   handleTabClick = (tab) => {
     this.setState({
@@ -41,12 +32,22 @@ class Organ extends Component {
     })
   }
 
+  handleOrganBlowupClick = () => {
+    this.fadeOut();
+    setTimeout(() => {
+      this.props.handleOrganClick(this.props.organ)
+    }, 2500)
+  }
+
   render() {
-    const {organ, handleOrganClick} = this.props
+    const {organ} = this.props
     return (
       <div style={{opacity: this.state.organOpacity}}>
         <img
-        className="organ-blowup" onClick={() => handleOrganClick(organ)} alt={organ.organ} src={organ.image}/>
+        className="organ-blowup" onClick={this.state.organOpacity >= 1
+          ? this.handleOrganBlowupClick
+          : null
+        } alt={organ.organ} src={organ.image}/>
         <div className="tab" >{
           organ.tabs.map(
             tab => <OrganTab handleTabClick={this.handleTabClick}  clicked={

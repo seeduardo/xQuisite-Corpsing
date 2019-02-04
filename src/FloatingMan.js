@@ -15,20 +15,20 @@ class FloatingMan extends Component {
   componentDidMount() {
     let fadeIn = setInterval(() => {this.state.floatingManOpacity <= 1
       ? this.setState({
-        floatingManOpacity: this.state.floatingManOpacity + 0.01
+        floatingManOpacity: this.state.floatingManOpacity + 0.008
         })
       : clearInterval(fadeIn)
-    }, 100)
+    }, 20)
   }
 
-  // componentWillUnmount() {
-  //   let fadeOut = setInterval(() => {this.state.floatingManOpacity > 0
-  //     ? this.setState({
-  //       floatingManOpacity: this.state.floatingManOpacity - 0.01
-  //       })
-  //     : clearInterval(fadeOut)
-  //   }, 100)
-  // }
+  fadeOut = () => {
+    let fadeOut = setInterval(() => {this.state.floatingManOpacity > 0
+      ? this.setState({
+        floatingManOpacity: this.state.floatingManOpacity - 0.008
+        })
+      : clearInterval(fadeOut)
+    }, 20)
+  }
 
   render() {
     return (
@@ -36,7 +36,7 @@ class FloatingMan extends Component {
           <img src={floatingMan} className="floating-man-image" alt="logo" />
           {
             this.state.initialData.map(
-              organ => <HotSpot organ={organ} key={organ.id}
+              organ => <HotSpot floatingManOpacity={this.state.floatingManOpacity} fadeOut={this.fadeOut} organ={organ} key={organ.id}
                 handleOrganClick={this.props.handleOrganClick}
               />
             )

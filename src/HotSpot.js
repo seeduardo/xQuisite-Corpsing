@@ -9,7 +9,6 @@ class HotSpot extends Component {
     cursorOverPopup: false,
     showPopup: false,
     popupOpacity: 0,
-
   }
 
   truthifyCursorOverHotspot = () => {
@@ -23,10 +22,10 @@ class HotSpot extends Component {
         });
         let fadeIn = setInterval(() => {this.state.popupOpacity <= 1 && this.state.cursorOverHotspot === true
           ? this.setState({
-            popupOpacity: this.state.popupOpacity + 0.025
+            popupOpacity: this.state.popupOpacity + 0.01
             })
           : clearInterval(fadeIn)
-        }, 100)
+        }, 50)
       }
     }, 1000)
     )
@@ -57,10 +56,10 @@ class HotSpot extends Component {
     });
     let fadeIn = setInterval(() => {this.state.popupOpacity <= 1 && this.state.cursorOverPopup === true
       ? this.setState({
-        popupOpacity: this.state.popupOpacity + 0.025
+        popupOpacity: this.state.popupOpacity + 0.01
         })
       : clearInterval(fadeIn)
-    }, 100)
+    }, 50)
   }
 
   falsifyCursorOverPopup = () => {
@@ -78,8 +77,15 @@ class HotSpot extends Component {
     )
   }
 
+  handleOrganThumbnailClick = () => {
+    this.props.fadeOut();
+    setTimeout(() => {
+      this.props.handleOrganClick(this.props.organ)
+    }, 2500)
+  }
+
   render() {
-    const {organ, handleOrganClick} = this.props
+    const {organ} = this.props
     return (
       <div>
           <div className="HotSpot" onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{bottom: organ.bottom, left: this.props.organ.left}}></div>
@@ -91,7 +97,12 @@ class HotSpot extends Component {
                    ? {bottom: organ.bottom + 50, left: organ.left + 50, visibility: "visible", opacity: this.state.popupOpacity}
                    : null
             }><p>{organ.title}</p>
-              <img onClick={() => handleOrganClick(this.props.organ)} src={organ.thumbnail} alt={organ.organ}/>
+              <img onClick={
+                this.props.floatingManOpacity >= 1
+                ? this.handleOrganThumbnailClick
+                :null
+              }
+              src={organ.thumbnail} alt={organ.organ}/>
               <p>{organ.quotation}</p>
              </div>
 
