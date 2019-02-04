@@ -25,9 +25,9 @@ class HotSpot extends Component {
             popupOpacity: this.state.popupOpacity + 0.01
             })
           : clearInterval(fadeIn)
-        }, 50)
+        }, 60)
       }
-    }, 1000)
+    }, 800)
     )
   }
 
@@ -59,7 +59,7 @@ class HotSpot extends Component {
         popupOpacity: this.state.popupOpacity + 0.01
         })
       : clearInterval(fadeIn)
-    }, 50)
+    }, 60)
   }
 
   falsifyCursorOverPopup = () => {

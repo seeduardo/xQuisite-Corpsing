@@ -69,6 +69,8 @@
 
 .organ-blowup {
   display: block;
+  max-height: 120vh;
+  max-width: 60vh;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
