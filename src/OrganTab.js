@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 class OrganTab extends Component {
 
   render() {
-    const {organ, tab, handleTabClick, clicked} = this.props
+    const {tabName, handleTabClick, clicked} = this.props
     return (
       <div>
-        <button className="tablinks" onClick={() => handleTabClick(tab)}>{tab}</button>
+        <button className={`tablinks ${clicked}`} onClick={() => handleTabClick(tabName)}>{tabName}</button>
       </div>
     );
   }

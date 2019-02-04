@@ -22,17 +22,17 @@ class Organ extends Component {
         <div className="tab" >{
           organ.tabs.map(
             tab => <OrganTab handleTabClick={this.handleTabClick}  clicked={
-                this.state.clickedTab === tab
+                this.state.clickedTab === tab.name
                 ? "active"
                 : "inactive"
                 }
-                organ={organ} tab={tab} key={tab} />
+                organ={organ} tabName={tab.name} key={tab.name} />
           )}
           </div>
           {this.state.clickedTab
           ? <div id={organ.id} className="tabcontent">
-              <h3>{this.state.clickedTab}</h3>
-              <p>{this.state.clickedTab} plus some other stuff from some other source innit.</p>
+
+              <p>{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </p>
             </div>
           :null}
 
