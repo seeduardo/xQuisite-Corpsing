@@ -3,6 +3,8 @@ import './App.css';
 import FloatingMan from './FloatingMan'
 import Organ from './Organ'
 
+// let fadeEffect;
+
 class App extends Component {
 
   state = {
@@ -10,12 +12,24 @@ class App extends Component {
     clickedOrgan: ''
   }
 
+  // fadeEffect = setInterval(() => {
+  //   let clickedOrgan = this.state.clickedOrgan;
+  //   if (clickedOrgan && !clickedOrgan.style.opacity) {
+  //     clickedOrgan.style.opacity = 1
+  //   } else if (clickedOrgan && clickedOrgan.style.opacity < 0.1) {
+  //     clearInterval(fadeEffect)
+  //   } else if (clickedOrgan) {
+  //     clickedOrgan.style.opacity -= 0.05
+  //   }
+  // }, 1000)
+
   handleOrganClick = (organ) => {
     let clickedOrgan = organ;
     this.setState({
       organIsClicked: !this.state.organIsClicked,
       clickedOrgan: clickedOrgan
     })
+
   }
 
   render() {

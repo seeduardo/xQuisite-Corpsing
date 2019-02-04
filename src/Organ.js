@@ -4,8 +4,36 @@ import OrganTab from './OrganTab'
 class Organ extends Component {
 
   state = {
-    clickedTab: ''
+    clickedTab: '',
+    organOpacity: 0
   }
+
+  componentDidMount() {
+    let fadeIn = setInterval(() => {this.state.organOpacity <= 1
+      ? this.setState({
+        organOpacity: this.state.organOpacity + 0.01
+        })
+      : clearInterval(fadeIn)
+    }, 100)
+  }
+
+  // fadeOut = () => {
+  //   let fadeOut = setInterval(() => {this.state.organOpacity > 0
+  //     ? this.setState({
+  //       organOpacity: this.state.organOpacity - 0.01
+  //       })
+  //     : clearInterval(fadeOut)
+  //   }, 100)
+  // }
+  //
+  // componentWillUnmount() {
+  //   let fadeOut = setInterval(() => {this.state.organOpacity > 0
+  //     ? this.setState({
+  //       organOpacity: this.state.organOpacity - 0.01
+  //       })
+  //     : clearInterval(fadeOut)
+  //   }, 100)
+  // }
 
   handleTabClick = (tab) => {
     this.setState({
@@ -16,7 +44,7 @@ class Organ extends Component {
   render() {
     const {organ, handleOrganClick} = this.props
     return (
-      <div >
+      <div style={{opacity: this.state.organOpacity}}>
         <img
         className="organ-blowup" onClick={() => handleOrganClick(organ)} alt={organ.organ} src={organ.image}/>
         <div className="tab" >{

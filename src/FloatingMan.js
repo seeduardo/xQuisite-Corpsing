@@ -8,12 +8,31 @@ import initialData from './initialData'
 class FloatingMan extends Component {
 
   state = {
-    initialData: initialData
+    initialData: initialData,
+    floatingManOpacity: 0
   }
+
+  componentDidMount() {
+    let fadeIn = setInterval(() => {this.state.floatingManOpacity <= 1
+      ? this.setState({
+        floatingManOpacity: this.state.floatingManOpacity + 0.01
+        })
+      : clearInterval(fadeIn)
+    }, 100)
+  }
+
+  // componentWillUnmount() {
+  //   let fadeOut = setInterval(() => {this.state.floatingManOpacity > 0
+  //     ? this.setState({
+  //       floatingManOpacity: this.state.floatingManOpacity - 0.01
+  //       })
+  //     : clearInterval(fadeOut)
+  //   }, 100)
+  // }
 
   render() {
     return (
-      <div className="FloatingMan">
+      <div style={{opacity: this.state.floatingManOpacity}} className="FloatingMan">
           <img src={floatingMan} className="floating-man-image" alt="logo" />
           {
             this.state.initialData.map(
