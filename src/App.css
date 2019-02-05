@@ -13,14 +13,14 @@
   color: white;
 }
 
-div#17.HotSpot {
+.EasterEgg {
   color: white;
   position: relative;
   z-index: 1;
   opacity: 0.1;
   transition: opacity 0.8s;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1em;
+  height: 1em;
   border-radius: 100%;
 }
 
@@ -35,16 +35,16 @@ div#17.HotSpot {
   border-radius: 100%;
 }
 
-.HotSpot:hover {
+.HotSpot:hover, .EasterEgg:hover {
   opacity: 1;
 }
 
-.HotSpot::after {
+.HotSpot::after, .EasterEgg::after {
   content: '';
   position: absolute;
   top: 25%;
   left: 25%;
-  border: 2.5px solid white;
+  border: 1.5px solid white;
   border-radius: 100%;
   width: 50%;
   height: 50%;

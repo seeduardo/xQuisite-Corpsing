@@ -86,7 +86,10 @@ class HotSpot extends Component {
     const {organ, floatingManOpacity} = this.props
     return (
       <div>
-          <div className="HotSpot" onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{bottom: organ.bottom, left: organ.left}} id={organ.id}></div>
+          <div className={
+              organ.id === 17
+              ? "EasterEgg"
+              : "HotSpot"} onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{bottom: organ.bottom, left: organ.left}} id={organ.id}></div>
           {
             <div className="popup"
                  onMouseEnter={this.truthifyCursorOverPopup}

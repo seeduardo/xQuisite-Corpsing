@@ -307,8 +307,8 @@ const initialData = [
     image: `${imgUrlRoot + 'OtherHand.jpg'}`,
     thumbnail: `${imgUrlRoot + 'OtherHand_tn.jpg'}`,
     quotation: `'Something about the other hand.' - Someone`,
-    bottom: 4355,
-    left: -60,
+    bottom: 4345,
+    left: -50,
     tabs: [
       {name: "The Body Politic", content: "blah"},
       {name: "Out of Body Experience", content: "blah2"},
