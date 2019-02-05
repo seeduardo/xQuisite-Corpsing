@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-// import { Icon } from 'semantic-ui-react';
-// import Popup from './Popup'
 
 class HotSpot extends Component {
 
@@ -85,10 +83,10 @@ class HotSpot extends Component {
   }
 
   render() {
-    const {organ} = this.props
+    const {organ, floatingManOpacity} = this.props
     return (
       <div>
-          <div className="HotSpot" onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{bottom: organ.bottom, left: this.props.organ.left}}></div>
+          <div className="HotSpot" onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{bottom: organ.bottom, left: organ.left}} id={organ.id}></div>
           {
             <div className="popup"
                  onMouseEnter={this.truthifyCursorOverPopup}
@@ -98,7 +96,7 @@ class HotSpot extends Component {
                    : null
             }><p>{organ.title}</p>
               <img onClick={
-                this.props.floatingManOpacity >= 1
+                floatingManOpacity >= 1
                 ? this.handleOrganThumbnailClick
                 :null
               }
@@ -116,26 +114,3 @@ class HotSpot extends Component {
 
 
 export default HotSpot;
-
-// <div className="HotSpot" id="brain" > </div>
-// <div className="HotSpot" id="hand" > </div>
-// <div className="HotSpot" id="gut" > </div>
-// </div>
-
-// state = {
-//   className: "HotSpot popup"
-// }
-//
-// popup = () => {
-//   this.setState({
-//     className: "HotSpot popup show"
-//   })
-//
-// }
-
-// <div className={this.state.className} onClick={this.popup} id="brain" >
-//   <span className="HotSpot popuptext" > HERE </span>
-// </div>
-// <div className={this.state.className} onClick={this.popup} id="hand" >
-//   <span className="HotSpot popuptext" > HERE </span>
-// </div>
