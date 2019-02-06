@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 class HotSpot extends Component {
 
@@ -23,7 +23,7 @@ class HotSpot extends Component {
             popupOpacity: this.state.popupOpacity + 0.01
             })
           : clearInterval(fadeIn)
-        }, 60)
+        }, 40)
       }
     }, 800)
     )
@@ -57,7 +57,7 @@ class HotSpot extends Component {
         popupOpacity: this.state.popupOpacity + 0.01
         })
       : clearInterval(fadeIn)
-    }, 60)
+    }, 40)
   }
 
   falsifyCursorOverPopup = () => {
@@ -71,7 +71,7 @@ class HotSpot extends Component {
         popupOpacity: 0
         })
       }
-    }, 800)
+    }, 600)
     )
   }
 
@@ -85,17 +85,17 @@ class HotSpot extends Component {
   render() {
     const {organ, floatingManOpacity} = this.props
     return (
-      <div>
+      <Fragment>
           <div className={
               organ.id === 17
               ? "EasterEgg"
-              : "HotSpot"} onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{bottom: organ.bottom, left: organ.left}} id={organ.id}></div>
+              : "HotSpot"} onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{top: organ.top, left: organ.left}} id={organ.id}></div>
           {
             <div className="popup"
                  onMouseEnter={this.truthifyCursorOverPopup}
                  onMouseLeave={this.falsifyCursorOverPopup}
                  style={this.state.showPopup
-                   ? {bottom: organ.bottom + 50, left: organ.left + 50, visibility: "visible", opacity: this.state.popupOpacity}
+                   ? {top: "3%", left: "60%", visibility: "visible", opacity: this.state.popupOpacity}
                    : null
             }><p>{organ.title}</p>
               <img onClick={
@@ -108,8 +108,7 @@ class HotSpot extends Component {
              </div>
 
           }
-
-      </div>
+      </Fragment>
     );
   }
 }

@@ -57,11 +57,16 @@ class Organ extends Component {
                 }
                 organ={organ} tabName={tab.name} key={tab.name} />
           )}
-          </div>
+        </div>
           {this.state.clickedTab
           ? <div id={organ.id} className="tabcontent">
-
-              <p>{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </p>
+              <p
+              className={
+                  this.state.clickedTab
+                  ? "active"
+                  : "inactive"
+                  }
+              >{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </p>
             </div>
           :null}
 

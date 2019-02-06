@@ -3,19 +3,27 @@
 }
 
 .FloatingMan {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
   background-color: black;
-  min-height: 100vh;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* font-size: calc(10px + 2vmin); */
   color: white;
+  max-width: 567px;
+  max-height: 754px;
+}
+
+.floating-man-image {
+  width: 100%;
 }
 
 .EasterEgg {
   color: white;
-  position: relative;
+  position: absolute;
   z-index: 1;
   opacity: 0.1;
   transition: opacity 0.8s;
@@ -26,7 +34,7 @@
 
 .HotSpot {
   color: white;
-  position: relative;
+  position: absolute;
   z-index: 1;
   opacity: 0.1;
   transition: opacity 0.8s;
@@ -53,7 +61,7 @@
 .popup {
   visibility: hidden;
   color: white;
-  position: relative;
+  position: absolute;
   z-index: 2;
   width: 15em;
   height: 15em;
@@ -112,8 +120,8 @@
   margin-right: auto;
   width: 50%;
 }
-
-.tabcontent p {
+/* 
+.tabcontent p.active {
   transition: opacity 2s ease;
   animation: fadeEffect 2s;
 }
@@ -121,4 +129,4 @@
 @keyframes fadeEffect {
   from {opacity: 0;}
   to {opacity: 1;}
-}
+} */
