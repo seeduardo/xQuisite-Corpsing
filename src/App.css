@@ -67,6 +67,10 @@
   height: 15em;
 }
 
+.popup-background {
+  background: rgba(25, 25, 25, 0.5);
+}
+
 .organ-blowup {
   display: block;
   max-height: 120vh;
@@ -120,7 +124,7 @@
   margin-right: auto;
   width: 50%;
 }
-/* 
+/*
 .tabcontent p.active {
   transition: opacity 2s ease;
   animation: fadeEffect 2s;

@@ -91,7 +91,7 @@ class HotSpot extends Component {
               ? "EasterEgg"
               : "HotSpot"} onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{top: organ.top, left: organ.left}} id={organ.id}></div>
           {
-            <div className="popup"
+            <div className="popup popup-background"
                  onMouseEnter={this.truthifyCursorOverPopup}
                  onMouseLeave={this.falsifyCursorOverPopup}
                  style={this.state.showPopup
@@ -103,8 +103,8 @@ class HotSpot extends Component {
                 ? this.handleOrganThumbnailClick
                 :null
               }
-              src={organ.thumbnail} alt={organ.organ}/>
-              <p>{organ.quotation}</p>
+                src={organ.thumbnail} alt={organ.organ}/>
+              <p className="popup-background">{organ.quotation}</p>
              </div>
 
           }
