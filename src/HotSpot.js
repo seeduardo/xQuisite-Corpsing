@@ -104,7 +104,7 @@ class HotSpot extends Component {
                 :null
               }
                 src={organ.thumbnail} alt={organ.organ}/>
-              <p className="popup-background">{organ.quotation}</p>
+              <p >{organ.quotation}</p>
              </div>
 
           }

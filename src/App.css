@@ -64,7 +64,7 @@
   position: absolute;
   z-index: 2;
   width: 15em;
-  height: 15em;
+  /* height: 15em; */
 }
 
 .popup-background {

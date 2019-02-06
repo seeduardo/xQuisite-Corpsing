@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import FloatingMan from './FloatingMan'
-import Organ from './Organ'
+import Organ from './Organ';
+import EasterEgg from './EasterEgg'
 
 // let fadeEffect;
 
@@ -11,17 +12,6 @@ class App extends Component {
     organIsClicked: false,
     clickedOrgan: ''
   }
-
-  // fadeEffect = setInterval(() => {
-  //   let clickedOrgan = this.state.clickedOrgan;
-  //   if (clickedOrgan && !clickedOrgan.style.opacity) {
-  //     clickedOrgan.style.opacity = 1
-  //   } else if (clickedOrgan && clickedOrgan.style.opacity < 0.1) {
-  //     clearInterval(fadeEffect)
-  //   } else if (clickedOrgan) {
-  //     clickedOrgan.style.opacity -= 0.05
-  //   }
-  // }, 1000)
 
   handleOrganClick = (organ) => {
     let clickedOrgan = organ;
@@ -37,7 +27,11 @@ class App extends Component {
       <div className="App">
         {
           this.state.organIsClicked
-          ? <Organ organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
+          ? (
+            this.state.clickedOrgan.id === 17
+            ? <EasterEgg organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
+            : <Organ organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
+            )
           : <FloatingMan handleOrganClick={this.handleOrganClick}/>
         }
       </div>

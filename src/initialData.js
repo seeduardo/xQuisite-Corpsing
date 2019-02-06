@@ -635,7 +635,8 @@ const initialData = [
     thumbnail: `${imgUrlRoot + 'OtherHand_tn.jpg'}`,
     top: "43.8%",
     left: "22.3%",
-    tabs: []
+    tabs: [],
+    poemPrompts: ["hello", "not hello"]
   }
 ]
 
