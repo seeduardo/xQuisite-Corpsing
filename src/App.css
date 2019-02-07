@@ -124,6 +124,12 @@
   margin-right: auto;
   width: 50%;
 }
+
+.form-input {
+  color: white;
+}
+
+
 /*
 .tabcontent p.active {
   transition: opacity 2s ease;

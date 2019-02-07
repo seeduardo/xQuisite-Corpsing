@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import OrganTab from './OrganTab'
-
 
 class EasterEgg extends Component {
 
   state = {
-    organOpacity: 0
+    organOpacity: 0,
+    submittedName: false,
+    nameInput: ''
   }
 
   componentDidMount() {
@@ -33,6 +33,19 @@ class EasterEgg extends Component {
     }, 2500)
   }
 
+  handleChange = (event) => {
+    this.setState({
+      nameInput: event.target.value
+    });
+  }
+
+  handleNameSubmit = (event) => {
+    event.preventDefault();
+    this.setState({
+      submittedName: true
+    })
+  }
+
   render() {
     const {organ} = this.props
     return (
@@ -41,29 +54,20 @@ class EasterEgg extends Component {
         className="organ-blowup" onClick={this.state.organOpacity >= 1
           ? this.handleOrganBlowupClick
           : null
-        } alt={organ.organ} src={organ.image}/>
-        <div className="tab" >{
-          organ.tabs.map(
-            tab => <OrganTab handleTabClick={this.handleTabClick}  clicked={
-                this.state.clickedTab === tab.name
-                ? "active"
-                : "inactive"
-                }
-                organ={organ} tabName={tab.name} key={tab.name} />
-          )}
-        </div>
-          {this.state.clickedTab
-          ? <div id={organ.id} className="tabcontent">
-              <p
-              className={
-                  this.state.clickedTab
-                  ? "active"
-                  : "inactive"
-                  }
-              >{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </p>
-            </div>
-          :null}
-
+          } alt={organ.organ} src={organ.image}/>
+        {
+          !this.state.submittedName
+          ? <form onSubmit={this.handleNameSubmit}>
+              <label className="form-input" >On the one hand, click above to go back. On the other hand, you can participate in x-Quisite Corpsing by entering your name <input placeholder="here" type="text" value={this.state.value} onChange={this.handleChange} /> and then clicking
+              </label>
+                <input type="submit" value="here" />
+            </form>
+          : <form onSubmit={this.handlePoemSubmit}>
+              <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> {organ.poemPrompts[0]} <hr/> Wax lyrical in response <input placeholder="here" type="text" value={this.state.value} onChange={this.handleChange} /> and then click
+              </label>
+                <input type="submit" value="here" />
+            </form>
+        }
       </div>
     );
   }

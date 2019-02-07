@@ -636,7 +636,7 @@ const initialData = [
     top: "43.8%",
     left: "22.3%",
     tabs: [],
-    poemPrompts: ["hello", "not hello"]
+    poemPrompts: ["this is a random line of poetry", "hello", "not hello", "summat else"]
   }
 ]
 
