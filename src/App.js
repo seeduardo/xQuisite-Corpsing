@@ -4,8 +4,6 @@ import FloatingMan from './FloatingMan'
 import Organ from './Organ';
 import EasterEgg from './EasterEgg'
 
-// let fadeEffect;
-
 class App extends Component {
 
   state = {
