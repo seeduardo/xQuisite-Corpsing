@@ -34,7 +34,7 @@ class PoemContainer extends Component {
       <div>
         <h1 style={{opacity: this.state.poemContainerOpacity}}  className="poem-container">PoemContainer YO!</h1>
         {this.state.allLines.map(
-          poem => <Poem poem={poem}/>
+          poem => <Poem poem={poem} key={poem.id}/>
         )
         }
       </div>
