@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import Poem from './Poem'
+
+const apiBaseUrl = 'http://localhost:3000/api/v1/'
 
 class PoemContainer extends Component {
 
   state = {
-    poemContainerOpacity: 0
+    poemContainerOpacity: 0,
+    allLines: []
   }
 
   componentDidMount() {
@@ -13,17 +17,27 @@ class PoemContainer extends Component {
         })
       : clearInterval(fadeIn)
     }, 20);
+    fetch(`${apiBaseUrl}later_lines`)
+      .then(resp => resp.json())
+      .then(allLinesData => this.handleAllLinesData(allLinesData))
   }
 
-  click = () => {
+  handleAllLinesData = allLinesData => {
+    let allLines = allLinesData;
     this.setState({
-      poemContainerOpacity: 0
+      allLines: allLines
     })
   }
 
   render() {
     return(
-      <h1 style={{opacity: this.state.poemContainerOpacity}} onClick={this.click} className="form-input">PoemContainer YO!</h1>
+      <div>
+        <h1 style={{opacity: this.state.poemContainerOpacity}}  className="poem-container">PoemContainer YO!</h1>
+        {this.state.allLines.map(
+          poem => <Poem poem={poem}/>
+        )
+        }
+      </div>
     )
   }
 }
