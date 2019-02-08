@@ -628,8 +628,7 @@ const initialData = [
     thumbnail: `${imgUrlRoot + 'OtherHand_tn.jpg'}`,
     top: "43.8%",
     left: "22.3%",
-    tabs: [],
-    poemPrompts: ["this is a random line of poetry", "hello", "not hello", "summat else"]
+    tabs: []
   }
 ]
 
