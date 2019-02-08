@@ -1,10 +1,3 @@
-// import brainTn from './Brain_tn.jpg';
-// import handTn from './Hand_tn.jpg';
-// import gutTn from './organImages/Gut_tn.jpg';
-// import brain from './Brain.jpg';
-// import hand from './Hand.jpg';
-// import gut from './Gut.jpg';
-
 const imgUrlRoot = 'http://localhost:3001/organImages/'
 
 const initialData = [
