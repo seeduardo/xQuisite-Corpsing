@@ -20,29 +20,29 @@ class FloatingMan extends Component {
         floatingManOpacity: this.state.floatingManOpacity + 0.008
         })
       : clearInterval(fadeIn)
-    }, 20)
+    }, 18)
   }
 
   fadeOut = () => {
     let fadeOut = setInterval(() => {this.state.floatingManOpacity > 0
       ? this.setState({
-        floatingManOpacity: this.state.floatingManOpacity - 0.008
+        floatingManOpacity: this.state.floatingManOpacity - 0.01
         })
       : clearInterval(fadeOut)
-    }, 20)
+    }, 18)
   }
 
   render() {
     return (
       <div style={{opacity: this.state.floatingManOpacity}} className="FloatingMan">
           <img src={floatingMan} className="floating-man-image" alt="logo" />
-          {
-            this.state.initialData.map(
-              organ => <HotSpot floatingManOpacity={this.state.floatingManOpacity} fadeOut={this.fadeOut} organ={organ} key={organ.id}
-                handleOrganClick={this.props.handleOrganClick}
-              />
-            )
-          }
+          {this.state.initialData.map(
+              organ => <HotSpot floatingManOpacity={this.state.floatingManOpacity}
+                                fadeOut={this.fadeOut}
+                                organ={organ}
+                                key={organ.id}
+                                handleOrganClick={this.props.handleOrganClick}/>
+            )}
       </div>
     );
   }

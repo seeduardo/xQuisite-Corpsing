@@ -20,12 +20,12 @@ class HotSpot extends Component {
         });
         let fadeIn = setInterval(() => {this.state.popupOpacity <= 1 && this.state.cursorOverHotspot === true
           ? this.setState({
-            popupOpacity: this.state.popupOpacity + 0.01
+            popupOpacity: this.state.popupOpacity + 0.008
             })
           : clearInterval(fadeIn)
-        }, 40)
+        }, 18)
       }
-    }, 800)
+    }, 700)
     )
   }
 
@@ -44,7 +44,7 @@ class HotSpot extends Component {
           showPopup: true
         })
       }
-    }, 800)
+    }, 700)
     )
   }
 
@@ -54,10 +54,10 @@ class HotSpot extends Component {
     });
     let fadeIn = setInterval(() => {this.state.popupOpacity <= 1 && this.state.cursorOverPopup === true
       ? this.setState({
-        popupOpacity: this.state.popupOpacity + 0.01
+        popupOpacity: this.state.popupOpacity + 0.008
         })
       : clearInterval(fadeIn)
-    }, 40)
+    }, 18)
   }
 
   falsifyCursorOverPopup = () => {
@@ -71,7 +71,7 @@ class HotSpot extends Component {
         popupOpacity: 0
         })
       }
-    }, 600)
+    }, 500)
     )
   }
 
@@ -79,7 +79,7 @@ class HotSpot extends Component {
     this.props.fadeOut();
     setTimeout(() => {
       this.props.handleOrganClick(this.props.organ)
-    }, 2500)
+    }, 2000)
   }
 
   render() {
@@ -100,7 +100,7 @@ class HotSpot extends Component {
                 onMouseEnter={this.truthifyCursorOverPopup}
                 onMouseLeave={this.falsifyCursorOverPopup}
                 style={this.state.showPopup
-                   ? {top: "3%", left: "60%", visibility: "visible", opacity: this.state.popupOpacity}
+                   ? {top: "3%", left: "0%", visibility: "visible", opacity: this.state.popupOpacity}
                    : null}>
             <p>{organ.title}</p>
               <img onClick={

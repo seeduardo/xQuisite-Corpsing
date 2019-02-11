@@ -16,7 +16,7 @@ class PoemContainer extends Component {
         poemContainerOpacity: this.state.poemContainerOpacity + 0.008
         })
       : clearInterval(fadeIn)
-    }, 20);
+    }, 18);
     fetch(`${apiBaseUrl}later_lines`)
       .then(resp => resp.json())
       .then(allLinesData => this.handleAllLinesData(allLinesData))
@@ -33,22 +33,22 @@ class PoemContainer extends Component {
     this.fadeOut();
     setTimeout(() => {
       this.props.handleOrganClick(this.props.organ)
-    }, 2500)
+    }, 2000)
   }
 
   fadeOut = () => {
     let fadeOut = setInterval(() => {this.state.poemContainerOpacity > 0
       ? this.setState({
-        poemContainerOpacity: this.state.poemContainerOpacity - 0.008
+        poemContainerOpacity: this.state.poemContainerOpacity - 0.01
         })
       : clearInterval(fadeOut)
-    }, 20)
+    }, 18)
   }
 
   render() {
     const {organ} = this.props
     return(
-      <div style={{opacity: this.state.poemContainerOpacity}}>
+      <div style={{opacity: this.state.poemContainerOpacity, marginTop: "2vh"}}>
         <div>
           <img
           className="organ-blowup" onClick={this.state.poemContainerOpacity >= 1

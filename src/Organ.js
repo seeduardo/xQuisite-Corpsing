@@ -14,16 +14,16 @@ class Organ extends Component {
         organOpacity: this.state.organOpacity + 0.008
         })
       : clearInterval(fadeIn)
-    }, 20)
+    }, 18)
   }
 
   fadeOut = () => {
     let fadeOut = setInterval(() => {this.state.organOpacity > 0
       ? this.setState({
-        organOpacity: this.state.organOpacity - 0.008
+        organOpacity: this.state.organOpacity - 0.01
         })
       : clearInterval(fadeOut)
-    }, 20)
+    }, 18)
   }
 
   handleTabClick = (tab) => {
@@ -36,13 +36,13 @@ class Organ extends Component {
     this.fadeOut();
     setTimeout(() => {
       this.props.handleOrganClick(this.props.organ)
-    }, 2500)
+    }, 2000)
   }
 
   render() {
     const {organ} = this.props
     return (
-      <div style={{opacity: this.state.organOpacity}}>
+      <div style={{opacity: this.state.organOpacity, marginTop: "2vh"}}>
         <img
         className="organ-blowup" onClick={this.state.organOpacity >= 1
           ? this.handleOrganBlowupClick
@@ -60,7 +60,6 @@ class Organ extends Component {
         </div>
           {this.state.clickedTab
           ? (this.state.clickedTab === "The Body Text"
-
             ? <div id={organ.id} className="tabcontent">
                 <pre
                 className={
@@ -78,10 +77,8 @@ class Organ extends Component {
                     : "inactive"
                     }
                 >{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </p>
-              </div>
-          )
+              </div>)
           :null}
-
       </div>
     );
   }
