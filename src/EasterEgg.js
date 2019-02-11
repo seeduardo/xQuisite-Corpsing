@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PoemContainer from './PoemContainer'
 
 const apiBaseUrl = 'http://localhost:3000/api/v1/'
 
@@ -85,7 +84,6 @@ class EasterEgg extends Component {
 
   handleEmailSubmit = (event) => {
     event.preventDefault();
-    this.fadeOut();
     let firstLineId = this.state.poemPrompt.first_line_id
       ? this.state.poemPrompt.first_line_id
       : this.state.poemPrompt.id
@@ -100,47 +98,48 @@ class EasterEgg extends Component {
     		first_line_id: firstLineId
       })
     })
-      .then(this.fadeOut())
-      .then(
-        setTimeout(() => {
+      .then(() =>
           this.setState({
             submittedAllData: true
-          })
-        }, 1200)
-      )
+          },
+          () => setTimeout(() => {
+            this.handleOrganBlowupClick()
+          }, 8000))
+        )
   }
 
   render() {
     const {organ} = this.props
     return (
-      !this.state.submittedAllData
-        ? (<div style={{opacity: this.state.organOpacity}}>
+      <div style={{opacity: this.state.organOpacity}}>
+        <div>
           <img
           className="organ-blowup" onClick={this.state.organOpacity >= 1
             ? this.handleOrganBlowupClick
             : null
             } alt={organ.organ} src={organ.image}/>
-          {
-              !this.state.submittedPoemLine
-                ? (!this.state.submittedName
-                  ? <form onSubmit={this.handleNameSubmit}>
-                      <label className="form-input" >On the one hand, click above to go back. On the other hand, you can participate in x-Quisite Corpsing by entering your name <input placeholder="here" type="text" onChange={this.handleNameInputChange} /> and then clicking
-                      </label>
-                        <input type="submit" value="here" />
-                    </form>
-                  : <form onSubmit={this.handlePoemSubmit}>
-                      <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> {this.state.poemPrompt.text} <hr/> Wax lyrical in response <input placeholder="here" type="text" onChange={this.handlePoemInputChange} /> and then click
-                      </label>
-                        <input type="submit" value="here" />
-                    </form>)
-                  : <form onSubmit={this.handleEmailSubmit}>
-                      <label className="form-input" >Many thanks to you, wise and judicious {this.state.nameInput}, your poetic prowess has been noted and stored. Once sufficient respondents have contributed to the poem for which they will ultimately share creative responsibility with you, the completed x-Quisite Corpse will be published here.  However, should you wish to receive your own body text via the new organ of communication, please enter your email address <input placeholder="here" type="email" onChange={this.handleEmailInputChange} />. But it's really up to you, it's your life. Whether or not you've chosen to furnish your email, you should probably then click <input type="submit" value="here" />, or this could end up a very long day. Finally, alternatively, if in a moment of sudden pique and madness you'd prefer to scrap all your answers and return to the home page, feel free to click on the welcoming hand of doom above.
-                      </label>
-                    </form>
-
-              }
-        </div>)
-      : <PoemContainer/>
+        </div>
+        {!this.state.submittedAllData
+          ? (!this.state.submittedPoemLine
+            ? (!this.state.submittedName
+              ? <form onSubmit={this.handleNameSubmit}>
+                  <label className="form-input" >On the one hand, click above to go back. On the other hand, you can participate in x-Quisite Corpsing by entering your name <input placeholder="here" type="text" onChange={this.handleNameInputChange} /> and then clicking
+                  </label>
+                    <input type="submit" value="here" />
+                </form>
+              : <form onSubmit={this.handlePoemSubmit}>
+                  <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> {this.state.poemPrompt.text} <hr/> Wax lyrical in response <input placeholder="here" type="text" onChange={this.handlePoemInputChange} /> and then click
+                  </label>
+                    <input type="submit" value="here" />
+                </form>)
+            : <form onSubmit={this.handleEmailSubmit}>
+                <label className="form-input" >Many thanks to you, wise and judicious {this.state.nameInput}, your poetic prowess has been noted and stored. Once sufficient respondents have contributed to the poem for which they will ultimately share creative responsibility with you, the completed x-Quisite Corpse will be published here (though you will have to scour these pages once again for the precise location).  However, should you wish to receive your own body text via the new organ of communication - as well as a clue to the published poem's location on this site - please enter your email address <input placeholder="here" type="email" onChange={this.handleEmailInputChange} />. But it's really up to you, it's your life. Whether or not you've chosen to furnish your email, you should probably then click <input type="submit" value="here" />, or this could end up a very long day. Finally, alternatively, if in a moment of sudden pique and madness you'd prefer to scrap all your answers and return to the home page, feel free to click on the welcoming hand of doom above.
+                </label>
+              </form>)
+          : <p className="poem">
+              Praise be unto you, venerable {this.state.nameInput}, for your contribution to the poetic majesty of this otherwise callous existence. As mentioned, your offering will appear somewhere on this site once contributions have reached the sacred number, and if you (correctly) entered your email, you will receive it that way at that point also. In the meantime, may your exploration of the body continue to please, tease and appease you....
+            </p>}
+      </div>
     );
   }
 }

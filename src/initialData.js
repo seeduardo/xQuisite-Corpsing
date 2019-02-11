@@ -612,6 +612,16 @@ const initialData = [
     top: "43.8%",
     left: "22.3%",
     tabs: []
+  },
+  {
+    id: 18,
+    organ: "poem",
+    title: "Oh my daze Leticia, what you found fam??",
+    image: `${imgUrlRoot + 'FullBody.jpg'}`,
+    thumbnail: `${imgUrlRoot + 'FullBody_tn.jpg'}`,
+    top: "85%",
+    left: "55%",
+    tabs: []
   }
 ]
 

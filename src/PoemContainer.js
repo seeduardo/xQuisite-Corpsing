@@ -30,8 +30,16 @@ class PoemContainer extends Component {
   }
 
   render() {
+    const {organ} = this.props
     return(
-      <div>
+      <div style={{opacity: this.state.organOpacity}}>
+        <div>
+          <img
+          className="organ-blowup" onClick={this.state.organOpacity >= 1
+            ? this.handleOrganBlowupClick
+            : null
+            } alt={organ.organ} src={organ.image}/>
+        </div>
         <h1 style={{opacity: this.state.poemContainerOpacity}}  className="poem-container">PoemContainer YO!</h1>
         {this.state.allLines.map(
           poem => <Poem poem={poem} key={poem.id}/>

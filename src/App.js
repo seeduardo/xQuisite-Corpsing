@@ -3,6 +3,8 @@ import './App.css';
 import FloatingMan from './FloatingMan'
 import Organ from './Organ';
 import EasterEgg from './EasterEgg'
+import PoemContainer from './PoemContainer'
+
 
 class App extends Component {
 
@@ -26,9 +28,11 @@ class App extends Component {
         {
           this.state.organIsClicked
           ? (
-            this.state.clickedOrgan.id === 17
-            ? <EasterEgg organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
-            : <Organ organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
+            !this.state.clickedOrgan.id === 17 && 18
+              ? <Organ organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
+              : (this.state.clickedOrgan.id === 17
+                ? <EasterEgg organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
+                : <PoemContainer organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>)
             )
           : <FloatingMan handleOrganClick={this.handleOrganClick}/>
         }
