@@ -1,6 +1,6 @@
 import React from 'react';
 
-const imgUrlRoot = 'http://localhost:3001/organImages/'
+const imgUrlRoot = 'http://localhost:3001/organAndFloatingManImages/'
 
 const initialData = [
   {
