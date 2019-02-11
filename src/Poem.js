@@ -4,7 +4,6 @@ class Poem extends Component {
 
   render() {
     const {poem} = this.props
-    // const first8Lines = poem.later_lines.slice(0, 7)
     return(
       poem.later_lines.length === 9
         ? <div className="poem">
