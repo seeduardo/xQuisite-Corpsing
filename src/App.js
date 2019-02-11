@@ -28,7 +28,7 @@ class App extends Component {
         {
           this.state.organIsClicked
           ? (
-            !this.state.clickedOrgan.id === 17 && 18
+            this.state.clickedOrgan.id < 17
               ? <Organ organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>
               : (this.state.clickedOrgan.id === 17
                 ? <EasterEgg organ={this.state.clickedOrgan} handleOrganClick={this.handleOrganClick}/>

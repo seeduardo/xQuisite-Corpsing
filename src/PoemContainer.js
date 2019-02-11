@@ -29,22 +29,36 @@ class PoemContainer extends Component {
     })
   }
 
+  handleOrganBlowupClick = () => {
+    this.fadeOut();
+    setTimeout(() => {
+      this.props.handleOrganClick(this.props.organ)
+    }, 2500)
+  }
+
+  fadeOut = () => {
+    let fadeOut = setInterval(() => {this.state.poemContainerOpacity > 0
+      ? this.setState({
+        poemContainerOpacity: this.state.poemContainerOpacity - 0.008
+        })
+      : clearInterval(fadeOut)
+    }, 20)
+  }
+
   render() {
     const {organ} = this.props
     return(
-      <div style={{opacity: this.state.organOpacity}}>
+      <div style={{opacity: this.state.poemContainerOpacity}}>
         <div>
           <img
-          className="organ-blowup" onClick={this.state.organOpacity >= 1
+          className="organ-blowup" onClick={this.state.poemContainerOpacity >= 1
             ? this.handleOrganBlowupClick
             : null
             } alt={organ.organ} src={organ.image}/>
-        </div>
-        <h1 style={{opacity: this.state.poemContainerOpacity}}  className="poem-container">PoemContainer YO!</h1>
         {this.state.allLines.map(
           poem => <Poem poem={poem} key={poem.id}/>
-        )
-        }
+          )}
+        </div>
       </div>
     )
   }

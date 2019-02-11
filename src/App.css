@@ -21,7 +21,7 @@
   width: 100%;
 }
 
-.EasterEgg {
+.EasterEgg, .poem-container {
   color: white;
   position: absolute;
   z-index: 1;
@@ -43,11 +43,11 @@
   border-radius: 100%;
 }
 
-.HotSpot:hover, .EasterEgg:hover {
+.HotSpot:hover, .EasterEgg:hover, .poem-container:hover {
   opacity: 1;
 }
 
-.HotSpot::after, .EasterEgg::after {
+.HotSpot::after, .EasterEgg::after, .poem-container:after {
   content: '';
   position: absolute;
   top: 25%;
@@ -129,7 +129,7 @@
   color: white;
 }
 
-.poem-container, .poem {
+.poem {
   color: white;
 }
 

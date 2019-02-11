@@ -619,8 +619,8 @@ const initialData = [
     title: "Oh my daze Leticia, what you found fam??",
     image: `${imgUrlRoot + 'FullBody.jpg'}`,
     thumbnail: `${imgUrlRoot + 'FullBody_tn.jpg'}`,
-    top: "85%",
-    left: "55%",
+    top: "98%",
+    left: "0%",
     tabs: []
   }
 ]

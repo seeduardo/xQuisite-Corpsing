@@ -87,17 +87,22 @@ class HotSpot extends Component {
     return (
       <Fragment>
           <div className={
-              organ.id === 17
-              ? "EasterEgg"
-              : "HotSpot"} onMouseEnter={this.truthifyCursorOverHotspot} onMouseLeave={this.falsifyCursorOverHotspot} style={{top: organ.top, left: organ.left}} id={organ.id}></div>
-          {
-            <div className="popup popup-background"
-                 onMouseEnter={this.truthifyCursorOverPopup}
-                 onMouseLeave={this.falsifyCursorOverPopup}
-                 style={this.state.showPopup
+              organ.id < 17
+                ? "HotSpot"
+                : (organ.id === 17
+                    ? "EasterEgg"
+                    : "poem-container")}
+                onMouseEnter={this.truthifyCursorOverHotspot}
+                onMouseLeave={this.falsifyCursorOverHotspot}
+                style={{top: organ.top, left: organ.left}}
+                id={organ.id}></div>
+          {<div className="popup popup-background"
+                onMouseEnter={this.truthifyCursorOverPopup}
+                onMouseLeave={this.falsifyCursorOverPopup}
+                style={this.state.showPopup
                    ? {top: "3%", left: "60%", visibility: "visible", opacity: this.state.popupOpacity}
-                   : null
-            }><p>{organ.title}</p>
+                   : null}>
+            <p>{organ.title}</p>
               <img onClick={
                 floatingManOpacity >= 1
                 ? this.handleOrganThumbnailClick
@@ -106,7 +111,6 @@ class HotSpot extends Component {
                 src={organ.thumbnail} alt={organ.organ}/>
               <p >{organ.quotation}</p>
              </div>
-
           }
       </Fragment>
     );
