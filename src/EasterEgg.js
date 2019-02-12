@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import FormErrors from './FormErrors'
 
 const apiBaseUrl = 'http://localhost:3000/api/v1/'
 
@@ -12,7 +13,12 @@ class EasterEgg extends Component {
     nameInput: '',
     poemInput: '',
     emailInput: '',
-    poemPrompt: {}
+    poemPrompt: {},
+    formErrors: {name: '', 'line of poetry': '', email: ''},
+    nameInputValid: false,
+    poemInputValid: false,
+    emailInputValid:false,
+    formValid: false
   }
 
   componentDidMount() {
@@ -51,22 +57,49 @@ class EasterEgg extends Component {
   }
 
   handleInputChange = (event) => {
+    const field = event.target.name;
+    const value = event.target.value;
     this.setState({
-      [event.target.name]: event.target.value
-    });
+      [field]: value
+    },
+      () => this.validateField(field, value)
+    );
   }
 
-  // handlePoemInputChange = (event) => {
-  //   this.setState({
-  //     [poemInput]: event.target.value
-  //   });
-  // }
-  //
-  // handleEmailInputChange = (event) => {
-  //   this.setState({
-  //     emailInput: event.target.value
-  //   });
-  // }
+  validateField(field, value) {
+    let fieldValidationErrors = this.state.formErrors;
+    let nameInputValid = this.state.nameInputValid;
+    let poemInputValid = this.state.poemInputValid;
+    let emailInputValid = this.state.emailInputValid;
+
+    switch(field) {
+      case 'nameInput':
+        nameInputValid = value.length >= 1;
+        fieldValidationErrors.name = nameInputValid ? '' : ` isn't really long enough yet, wouldn't you say?`;
+        break;
+      case 'poemInput':
+        poemInputValid = value.length >= 1;
+        fieldValidationErrors['line of poetry'] = poemInputValid ? '': ` is perhaps a little on the short side, n'est-ce pas?`;
+        break;
+      case 'emailInput':
+        emailInputValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) || value === '';
+        fieldValidationErrors.email = emailInputValid ? '' : ` does not yet resemble a valid address, chum, so if you're going to bother joining in, make sure to do it properly.... Just saying.`;
+        break;
+      default:
+        break;
+    }
+    this.setState({formErrors: fieldValidationErrors,
+                    nameInputValid: nameInputValid,
+                    poemInputValid: poemInputValid,
+                    emailInputValid: emailInputValid
+                  }, this.validateForm);
+  }
+
+  validateForm() {
+    this.setState({
+      formValid: this.state.nameInputValid && this.state.poemInputValid && this.state.emailInputValid
+    });
+  }
 
   handleNameAndPoemSubmit = (event) => {
     event.preventDefault();
@@ -74,13 +107,6 @@ class EasterEgg extends Component {
       [event.target.name]: true
     })
   }
-
-  // handlePoemSubmit = (event) => {
-  //   event.preventDefault();
-  //   this.setState({
-  //     submittedPoemLine: true
-  //   })
-  // }
 
   handleEmailSubmit = (event) => {
     event.preventDefault();
@@ -123,20 +149,23 @@ class EasterEgg extends Component {
           ? (!this.state.submittedPoemLine
             ? (!this.state.submittedName
               ? <form onSubmit={this.handleNameAndPoemSubmit} name="submittedName">
-                  <label className="form-input" >On the one hand, click above to go back. On the other hand, you can participate in x-Quisite Corpsing by entering your name <input placeholder="here" type="text" onChange={this.handleInputChange} name="nameInput"/> and then clicking <input type="submit" value="here"/>.
+                  <label className="form-input" >On the one hand, click above to go back. On the other hand, you can participate in x-Quisite Corpsing by entering your name <input placeholder="here" type="text" onChange={this.handleInputChange} name="nameInput"/> and then clicking <input type="submit" value="here" disabled={!this.state.nameInputValid}/>.<br/><br/>
+                  <FormErrors formErrors={this.state.formErrors} />
                   </label>
                 </form>
               : <form onSubmit={this.handleNameAndPoemSubmit} name="submittedPoemLine">
-                  <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> {this.state.poemPrompt.text} <hr/> Wax lyrical in response <input placeholder="here" type="text" onChange={this.handleInputChange} name="poemInput"/> and then click <input type="submit" value="here"/>.
+                  <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> {this.state.poemPrompt.text} <hr/> Wax lyrical in response <input placeholder="here" type="text" onChange={this.handleInputChange} name="poemInput"/> and then click <input type="submit" value="here" disabled={!this.state.poemInputValid}/>.<br/>
+                  <FormErrors formErrors={this.state.formErrors} />
                   </label>
                 </form>)
             : <form onSubmit={this.handleEmailSubmit}>
-                <label className="form-input" >Many thanks to you, wise and judicious {this.state.nameInput}, your poetic prowess has been noted and stored. Once sufficient respondents have contributed to the poem for which they will ultimately share creative responsibility with you, the completed x-Quisite Corpse will be published here (though you will have to scour these pages once again for the precise location).  However, should you wish to receive your own body text via the new organ of communication - as well as a clue to the published poem's location on this site - please enter your email address <input placeholder="here" type="email" onChange={this.handleInputChange} name="emailInput"/>. But it's really up to you, it's your life. Whether or not you've chosen to furnish your email, you should probably then click <input type="submit" value="here" />, or this could end up a very long day. Finally, alternatively, if in a moment of sudden pique and madness you'd prefer to scrap all your answers and return to the home page, feel free to click on the welcoming hand of doom above.
+                <label className="form-input" >Many thanks to you, wise and judicious {this.state.nameInput}, your poetic prowess has been noted and stored. Once sufficient respondents have contributed to the poem for which they will ultimately share creative responsibility with you, the completed x-Quisite Corpse will be published here (though you will have to scour these pages once again for the precise location).  However, should you wish to receive your own body text via the new organ of communication - as well as a clue to the published poem's location on this site - please enter your email address <input placeholder="here" type="email" onChange={this.handleInputChange} name="emailInput"/>. But it's really up to you, it's your life. Whether or not you've chosen to furnish your email, you should probably then click <input type="submit" value="here" disabled={!this.state.formValid}/>, or this could end up a very long day. <br/><FormErrors formErrors={this.state.formErrors} /><br/>Finally, alternatively, if in a moment of sudden pique and madness you'd prefer to scrap all your answers and return to the home page, feel free to click on the welcoming hand of doom above.
                 </label>
               </form>)
           : <p className="poem">
               Praise be unto you, venerable {this.state.nameInput}, for your contribution to the poetic majesty of this otherwise callous existence. As mentioned, your offering will appear somewhere on this site once contributions have reached the sacred number, and if you (correctly) entered your email, you will receive it that way at that point also. In the meantime, may your exploration of the body continue to please, tease and appease you....
             </p>}
+
       </div>
     );
   }
