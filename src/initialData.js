@@ -183,8 +183,13 @@ const initialData = [
     top: "84%",
     left: "49%",
     tabs: [
-      {name: "The Body Politic", content: `'The act of neurofeedback gives users an idea, an image, about their selves that is rather computerized. They describe the neurofeedback process as a "defragmentation of your computer", "cubes put in the right order", "a computer wiring me", "the program that reacts on the waves in your head", "my system is unstable", "my system resets itself over and over again". One could say that in the search for a better self the brain becomes an important partner for the user. This brain thinks for, speaks with, works on, and interferes with the user. It can split into neurotransmitters, brainwaves, neurons, substances and alpha-things. It interacts with the user’s world, life, psychology and ideas, but also the other way around. It can withhold the user from her or his real self, or it can change or cure this real self.
-      New technologies of the self give rise to new selves, stated Foucault, and in the case of the brain devices this is clearly the case. The act of manipulating the brain with a device makes people very aware of their biological constitution. First they learn that their problems are brain problems, then they see these problems visualized in their brain map, and next they interfere directly with their brains to fix these problems. In this process the brain is clearly separated from the self. But more than that, users of brain devices need more and more entities to explain their selves and their healing process.' - Jonna Brennkinmeijer`},
+      {name: "The Body Politic", content: `'First, we find that
+estimating the average effect of an increase in environmental costs over all trade flows understates
+the effect of environmental regulations on trade with low-income or low-standard countries.
+Second, we find that estimating the average effect of an increase in environmental costs over all
+industries understates the effect that regulatory stringency has on trade within the geographically
+mobile (i.e., footloose) industries. Importantly, polluting industries also appear to be relatively
+immobile.' - Josh Ederington, Arik Levinson and Jenny Minier`},
       {name: "Out of Body Experience", content: `'"I was unhappy because I had no shoes until I met a man with no feet." The Watchmen exchanged glances. "What?" said Vimes, very carefully. "People like it if I occasionally come up with a little aphorism or inspiring Thought For The Day," said the imp. "So how did you meet this man with no feet?" said Vimes. "I didn't actually meet him," said the imp. "It was a general metaphorical statement." " Well, that's it, then," said Vimes. "If you'd met him you could have asked him if he had any boots he didn't have any use for."' - Terry Pratchett`},
       {name: "Corpus Delicti", content:`'Hold on to the real tragedy at the heart of the farce, I thought briefly, and walked over to the water trough to look at the foot that lay behind it. There were horse-feed nuts scattered everywhere around. Without expecting much emotion, I bent and picked the foot up. I hadn't seen the other severed feet. I'd actually thought some of the reported reactions excessive. But the reality of that poor, unexpected, curiously lonely lump of bone, gristle and torn ends of blood vessels, that wasted miracle of anatomical elegance, moved me close to the fury and grief of the owners.' - Dick Francis`},
       {name: "Foreign Body", content: `'Eran casi siempre cuerpos esqueléticos, amarillos, como momias. Al dar en la piedra hacían un ruido desagradable, extraño, como de algo sin elasticidad que se derrama; luego, los mozos iban cogiendo los muertos, uno a uno, por los pies y arrastrándolos por el suelo, y al pasar unas escaleras que había para bajar a un patio donde estaba el depósito de la sala, las cabezas iban dando lúgubremente en los escalones de piedra.' - Pío Baroja`},
@@ -223,30 +228,36 @@ const initialData = [
     top: "24%",
     left: "42.6%",
     tabs: [
-      {name: "The Body Politic", content: `'The act of neurofeedback gives users an idea, an image, about their selves that is rather computerized. They describe the neurofeedback process as a "defragmentation of your computer", "cubes put in the right order", "a computer wiring me", "the program that reacts on the waves in your head", "my system is unstable", "my system resets itself over and over again". One could say that in the search for a better self the brain becomes an important partner for the user. This brain thinks for, speaks with, works on, and interferes with the user. It can split into neurotransmitters, brainwaves, neurons, substances and alpha-things. It interacts with the user’s world, life, psychology and ideas, but also the other way around. It can withhold the user from her or his real self, or it can change or cure this real self.
-      New technologies of the self give rise to new selves, stated Foucault, and in the case of the brain devices this is clearly the case. The act of manipulating the brain with a device makes people very aware of their biological constitution. First they learn that their problems are brain problems, then they see these problems visualized in their brain map, and next they interfere directly with their brains to fix these problems. In this process the brain is clearly separated from the self. But more than that, users of brain devices need more and more entities to explain their selves and their healing process.' - Jonna Brennkinmeijer`},
-      {name: "Out of Body Experience", content: `'Thought is not arborescent, and the brain is not a rooted or ramified matter. What are wrongly called "dendrites" do not assure the connection of neurons in a continuous fabric. The discontinuity between cells, the role of the axons, the functioning of the synapses, the existence of synaptic microfissures, the leap each message makes across these fissures, make the brain a multiplicity immersed in its plane of consistency or neuroglia, a whole uncertain, probabilistic system ("the uncertain nervous system"). Many people have a tree growing in their heads, but the brain itself is much more a grass than a tree. "The axon and the dendrite twist around each other like bindweed around brambles, with synapses at each of the thorns."' - Gilles Deleuze and Félix Guattari`},
-      {name: "Corpus Delicti", content:`'All his life Walt Whitman believed in the science of phrenology – you know, reading the bumps on the skull. Whitman was interested in brains and skulls – thought they could tell you everything about a man’s character. Anyway, when Whitman lay dying over there in New Jersey about fifty or sixty years ago, he agreed to let them perform an autopsy on him after he was dead. A lot of people thought he was a genius, you see, and they wanted to take a look at his brain to find out if there was anything special about it. So, the day after he died, a doctor removed Whitman's brain - cut it right out of his head - and had it sent to the American Anthropometric Society to be measured and weighed. But this is where the story gets interesting. The brain arrives at the laboratory, and just as they're about to get to work on it, one of the assistants drops it on the floor. A brain isn't very tough you know. It splattered all over the place, and that was that. The brain of America’s greatest poet got swept up and thrown out with the garbage. It’s sad to think of poor Walt lying in his grave, though. All alone and without any brains.' - Paul Auster`},
-      {name: "Foreign Body", content: `'Es importante tener en cuenta que cierta sobreexigencia puede derivar, sobre todo cuando el cerebro está en desarrollo, en un trastorno compulsivo. La persona que  transita largas sesiones conectada en detrimento de otras actividades, con necesidad imperiosa de conectarse y gran malestar si no puede, con dificultades para autolimitarse y con efectos nocivos en su estado de ánimo (usualmente depresión y ansiedad), tiene los síntomas más frecuentes de este trastorno adictivo.
-      Esto no significa que los usos normales de estas tecnologías lleven a esta condición, sino que, por lo general, quienes la padecen son personas que presentan una neurobiología particular que los hace más vulnerables a caer en estas conductas compulsivas.
-      Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
+      {name: "The Body Politic", content: `'Understanding why the political heart of Information Literacy was lost reveals biases in the systems used to organise the production and consumption of information in society, including the educational system. These systems are based on a particular notion of authority; that it is centralised, exclusionary and unitary, instead of distributed, participatory and polyvocal (many-voiced).' - Andrew Whitworth`},
+      {name: "Out of Body Experience", content: `'I saw this divine Heart as on a throne of flames, more brilliant than
+the sun and transparent as crystal. It had Its adorable wound and
+was encircled with a crown of thorns, which signified the pricks
+our sins caused Him. It was surmounted by a cross which signified
+that, from the first moment of His Incarnation, that is, from the
+time this Sacred Heart was formed, the cross was planted in It.' - Margaret Mary Alacoque`},
+      {name: "Corpus Delicti", content:`'It was not busy in the sandwich bar, so I sat there for another fifteen minutes. I thought about the heart. Who could it belong to? The original person was probably dead, the person born with that heart, but there was a very small chance they might have had a transplant and still be alive with someone else's heart in their chest. Maybe they had thrown the old heart from the train to say goodbye to it for ever. If so, it was a very poetic gesture. I did not feel disgust.' - Toby Litt`},
+      {name: "Foreign Body", content: `'O coração. Não o coração no meio de frases que circulam sem correr riscos pelos cruzamentos e se deixam traduzir em todas as línguas. Não o coração dos arquivos cardiográficos,
+simplesmente, objeto de conhecimentos ou de técnicas, de filosofias e de discursos bio-éticojurídicos. Não o coração das Escrituras ou de Pascal, provavelmente, nem mesmo, o que é
+ainda menos evidente, aquele que Heidegger prefere ver em seu lugar. Não, lima história de
+"coração", poeticamente envolta no idioma "aprender de cor", este da minha língua ou de uma
+outra, a inglesa (to learn lry heart), ou ainda de uma outra, a árabe (hafiza a'n zahrzkalb) - um
+único trajeto de múltiplas vias' - Jacques Derrida`},
       {name: "The Body Text", content: `
-        The brain is wider than the sky,<br>
-          For, put them side by side,
-        The one the other will include
-          With ease, and you beside.
+          Works of heart bleeding dark
+          Black, magniloquent art
+          Monotonous palate
+          Murky spectrum
+          Grimly unlimited
+          Prolific food for thought
+          Contrasting, fed with force
+          Abstraction, so choking
+          So provocative
 
-        The brain is deeper than the sea,
-          For, hold them, blue to blue,
-        The one the other will absorb,
-          As sponges, buckets do.
+          Bleeding works of art
+          Seething work so dark
+          Seering words from the heart
 
-        The brain is just the weight of God,
-          For, lift them, pound for pound,
-        And they will differ, if they do,
-          As syllable from sound.
-
-                            Emily Dickinson`
+                                Carcass`
       },
     ]
   },
@@ -260,30 +271,52 @@ const initialData = [
     top: "64.4%",
     left: "42.7%",
     tabs: [
-      {name: "The Body Politic", content: `'The act of neurofeedback gives users an idea, an image, about their selves that is rather computerized. They describe the neurofeedback process as a "defragmentation of your computer", "cubes put in the right order", "a computer wiring me", "the program that reacts on the waves in your head", "my system is unstable", "my system resets itself over and over again". One could say that in the search for a better self the brain becomes an important partner for the user. This brain thinks for, speaks with, works on, and interferes with the user. It can split into neurotransmitters, brainwaves, neurons, substances and alpha-things. It interacts with the user’s world, life, psychology and ideas, but also the other way around. It can withhold the user from her or his real self, or it can change or cure this real self.
-      New technologies of the self give rise to new selves, stated Foucault, and in the case of the brain devices this is clearly the case. The act of manipulating the brain with a device makes people very aware of their biological constitution. First they learn that their problems are brain problems, then they see these problems visualized in their brain map, and next they interfere directly with their brains to fix these problems. In this process the brain is clearly separated from the self. But more than that, users of brain devices need more and more entities to explain their selves and their healing process.' - Jonna Brennkinmeijer`},
-      {name: "Out of Body Experience", content: `'Thought is not arborescent, and the brain is not a rooted or ramified matter. What are wrongly called "dendrites" do not assure the connection of neurons in a continuous fabric. The discontinuity between cells, the role of the axons, the functioning of the synapses, the existence of synaptic microfissures, the leap each message makes across these fissures, make the brain a multiplicity immersed in its plane of consistency or neuroglia, a whole uncertain, probabilistic system ("the uncertain nervous system"). Many people have a tree growing in their heads, but the brain itself is much more a grass than a tree. "The axon and the dendrite twist around each other like bindweed around brambles, with synapses at each of the thorns."' - Gilles Deleuze and Félix Guattari`},
-      {name: "Corpus Delicti", content:`'All his life Walt Whitman believed in the science of phrenology – you know, reading the bumps on the skull. Whitman was interested in brains and skulls – thought they could tell you everything about a man’s character. Anyway, when Whitman lay dying over there in New Jersey about fifty or sixty years ago, he agreed to let them perform an autopsy on him after he was dead. A lot of people thought he was a genius, you see, and they wanted to take a look at his brain to find out if there was anything special about it. So, the day after he died, a doctor removed Whitman's brain - cut it right out of his head - and had it sent to the American Anthropometric Society to be measured and weighed. But this is where the story gets interesting. The brain arrives at the laboratory, and just as they're about to get to work on it, one of the assistants drops it on the floor. A brain isn't very tough you know. It splattered all over the place, and that was that. The brain of America’s greatest poet got swept up and thrown out with the garbage. It’s sad to think of poor Walt lying in his grave, though. All alone and without any brains.' - Paul Auster`},
-      {name: "Foreign Body", content: `'Es importante tener en cuenta que cierta sobreexigencia puede derivar, sobre todo cuando el cerebro está en desarrollo, en un trastorno compulsivo. La persona que  transita largas sesiones conectada en detrimento de otras actividades, con necesidad imperiosa de conectarse y gran malestar si no puede, con dificultades para autolimitarse y con efectos nocivos en su estado de ánimo (usualmente depresión y ansiedad), tiene los síntomas más frecuentes de este trastorno adictivo.
-      Esto no significa que los usos normales de estas tecnologías lleven a esta condición, sino que, por lo general, quienes la padecen son personas que presentan una neurobiología particular que los hace más vulnerables a caer en estas conductas compulsivas.
-      Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
+      {name: "The Body Politic", content: `'Following this simple path can work, but there are
+many common obstructions that often lead to serious
+missteps. By recognizing the complications, we can
+give change legs to overcome the challenges that
+arise along the way. To answer our key question at
+least partially, we might think of change as traveling
+on four legs: frameworks, leaders, community, and
+institutionalization.' - David N Perkins and James D Reese`},
+      {name: "Out of Body Experience", content: `'In traditional Hollywood iconography, the impairment of a man’s leg or arm
+(via paralysis, amputation, etc.) functioned
+as a code for impotence, one ‘member’ substituting for another. After 1934, when Production Code Czar Joseph Breen began rigorously to police cinematic subtexts, however, cagey auteurs began to double the code
+against itself in order to smuggle in forbidden sexual content. The stiff, limping leg
+and its accompanying fetishes (the cane,
+e.g.) were positioned in montage to suggest
+perverse ‘inversion’—impotence-with-women-as-sexual-potency-with-men' - Nancy Steffen-Fluhr`},
+      {name: "Corpus Delicti", content:`'It must have been about forty minutes later that Amyas complained of stiffness and pains. He said he thought he must have got a touch of muscular rehumatism. Amyas was always intolerant of any ailment and he didn't like being fussed over. After saying that he turned it off with a light: "Old age, I suppose. You've taken on a creaking old man, Elsa." I played up to him. But I noticed that his legs moved stiffly and querly and that he grimaced once or twice. I never dreamt that it wasn't rheumatism.' - Agatha Christie`},
+      {name: "Foreign Body", content: `'No puedo dormir otra vez. Visité a un neurólogo. Un hombre alto y guapo. Me estoy enamorando de él. Me gusta este sentimiento. Estoy alegre. él realizó una encuesta. El sistema nervioso periférico no está perturbado. Esta noticia no es ni mala ni buena para mí. Nadie cree que haya un problema. El nombre de neurólogo es Igor. Que piensará él de mí? Igor también piensa que esoty deprimida. Los médicos no quieren entender sobre el Síndrome de piernas inquietas. - Kseniia Shantceva`},
       {name: "The Body Text", content: `
-        The brain is wider than the sky,<br>
-          For, put them side by side,
-        The one the other will include
-          With ease, and you beside.
+          Insurance: You are allowed ten socks/year
 
-        The brain is deeper than the sea,
-          For, hold them, blue to blue,
-        The one the other will absorb,
-          As sponges, buckets do.
+          Insurance: You are not allowed to walk in oceans
 
-        The brain is just the weight of God,
-          For, lift them, pound for pound,
-        And they will differ, if they do,
-          As syllable from sound.
+          Insurance: If you had fought for us, if you
+          had lost your leg for us, for freedom, then
+          we would cover the leg that walks in oceans
 
-                            Emily Dickinson`
+          and why is it always a poem is a walk?
+
+          A poem is like a walk
+          A poem is like going on a walk
+          A walk is like a poem
+          I was walking the other day and a poem tripped me
+
+          I was about to give up
+
+          Yes
+          Yes
+          I know
+
+          I am trying to walk the treadmill
+          My leg beeps at 3 mph
+          This is the conference for hackers
+          Can somebody hack me
+          Can somebody change my settings
+
+                            Jillian Weise`
       },
     ]
   },
