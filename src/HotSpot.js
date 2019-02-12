@@ -109,7 +109,7 @@ class HotSpot extends Component {
                 :null
               }
                 src={organ.thumbnail} alt={organ.organ}/>
-              <p >{organ.quotation}</p>
+              <div>{organ.quotation}</div>
              </div>
           }
       </Fragment>

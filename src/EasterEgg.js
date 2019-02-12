@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FormErrors from './FormErrors'
 
 const apiBaseUrl = 'http://localhost:3000/api/v1/'
+let formSubmissionDelay
 
 class EasterEgg extends Component {
 
@@ -120,7 +121,6 @@ class EasterEgg extends Component {
     		text: this.state.poemInput,
     		author: this.state.nameInput,
     		email: this.state.emailInput,
-    		line_number: firstLineId + 1,
     		first_line_id: firstLineId
       })
     })
@@ -128,7 +128,7 @@ class EasterEgg extends Component {
           this.setState({
             submittedAllData: true
           },
-          () => setTimeout(() => {
+          () => formSubmissionDelay = setTimeout(() => {
             this.handleOrganBlowupClick()
           }, 7000))
         )
@@ -140,10 +140,16 @@ class EasterEgg extends Component {
       <div style={{opacity: this.state.organOpacity, marginTop: "2vh"}}>
         <div>
           <img
-          className="organ-blowup" onClick={this.state.organOpacity >= 1
-            ? this.handleOrganBlowupClick
-            : null
-            } alt={organ.organ} src={organ.image}/>
+            className="organ-blowup" onClick={
+              () => {
+                clearTimeout(formSubmissionDelay);
+                if (this.state.organOpacity >= 1) {
+                  this.handleOrganBlowupClick()
+                }
+              }
+            }
+            alt={organ.organ}
+            src={organ.image}/>
         </div>
         {!this.state.submittedAllData
           ? (!this.state.submittedPoemLine
