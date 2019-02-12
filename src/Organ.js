@@ -59,26 +59,27 @@ class Organ extends Component {
           )}
         </div>
           {this.state.clickedTab
-          ? (this.state.clickedTab === "The Body Text"
+            // (this.state.clickedTab === "The Body Text"
+            //   ? <div id={organ.id} className="tabcontent">
+            //       <pre
+            //       className={
+            //           this.state.clickedTab
+            //           ? "active"
+            //           : "inactive"
+            //           }
+            //       >{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </pre>
+            //     </div>
+            //   :
             ? <div id={organ.id} className="tabcontent">
-                <pre
-                className={
-                    this.state.clickedTab
-                    ? "active"
-                    : "inactive"
-                    }
-                >{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </pre>
+                  <p
+                  className={
+                      this.state.clickedTab
+                      ? "active"
+                      : "inactive"
+                      }
+                  >{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </p>
               </div>
-            : <div id={organ.id} className="tabcontent">
-                <p
-                className={
-                    this.state.clickedTab
-                    ? "active"
-                    : "inactive"
-                    }
-                >{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </p>
-              </div>)
-          :null}
+            :null}
       </div>
     );
   }
