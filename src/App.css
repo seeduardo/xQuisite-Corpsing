@@ -3,6 +3,7 @@
   text-align: center;
   overflow: hidden;
   font-family: fantasy;
+  font-weight: bold;
 }
 
 .FloatingMan {
@@ -66,9 +67,26 @@
   color: white;
   position: absolute;
   z-index: 2;
-  max-width: 30%;
-  /* width: 15em; */
-  /* height: 15em; */
+  height: 33%;
+  width: 33%;
+  text-align: justify;
+}
+
+.popup h4 {
+  text-align: center;
+  font-family: fantasy;
+  font-weight: bold;
+}
+
+.popup img{
+  margin-left: 33%;
+  height: 33%;
+  width: 33%;
+  border-radius: 10%;
+}
+
+.popup div {
+  height: 33%;
 }
 /*
 .popup-background {
@@ -77,8 +95,8 @@
 
 .organ-blowup {
   display: block;
-  max-height: 55vh;
-  max-width: 35vh;
+  max-height: 66vh;
+  max-width: 42vh;
   margin-left: auto;
   margin-right: auto;
   /* width: 50%; */
@@ -95,7 +113,7 @@
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-  max-width: 35vh;
+  max-width: 42vh;
   /* width: 50%; */
 }
 
@@ -106,22 +124,27 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.6s;
+  padding: 5px 5px 5px 5px;
+  transition: 0.3s;
+  font-family: fantasy;
+  font-weight: bold;
 }
 
 .tab button:hover {
-  background-color: #bbb;
+  border-radius: 30%;
+  background-color: #2d2c38;
 }
 
 .tab button.active {
-  background-color: #aaa;
-  color: black;
+  border-radius: 3%;
+  border: 1px solid white;
+  background-color: #2d2c38;
+  color: white;
 }
 
 .tabcontent, .form-input, .poem {
   display: block;
-  padding: 6px 12px;
+  padding: 10px 12px;
   border: 1px solid white;
   /* border-top: none; */
   color: white;
@@ -129,9 +152,22 @@
   margin-right: auto;
   margin-bottom: auto;
   margin-top: auto;
-  max-width: 35vh;
+  max-width: 42vh;
   overflow: auto;
-  height: 275px;
+  max-height: 33vh;
+}
+
+input {
+  font-family: fantasy;
+  background-color: #22211d;
+  font-weight: bold;
+  border: hidden;
+  color: #f2dea3;
+  border-radius: 5%;
+}
+
+input.button {
+  border: hidden;
 }
 
 /* .form-input {

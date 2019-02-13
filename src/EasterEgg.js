@@ -155,12 +155,12 @@ class EasterEgg extends Component {
           ? (!this.state.submittedPoemLine
             ? (!this.state.submittedName
               ? <form onSubmit={this.handleNameAndPoemSubmit} name="submittedName">
-                  <label className="form-input" >On the one hand, click above to go back. On the other hand, you can participate in x-Quisite Corpsing by entering your name <input placeholder="here" type="text" onChange={this.handleInputChange} name="nameInput"/> and then clicking <input type="submit" value="here" disabled={!this.state.nameInputValid}/>.<br/><br/>
+                  <label className="form-input" >On the one hand, click above to go back. On the other hand, you can participate in x-Quisite Corpsing by entering your name <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="nameInput"/> and then clicking <input type="submit" value="here" disabled={!this.state.nameInputValid}/>.<br/><br/>
                   <FormErrors formErrors={this.state.formErrors} />
                   </label>
                 </form>
               : <form onSubmit={this.handleNameAndPoemSubmit} name="submittedPoemLine">
-                  <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> {this.state.poemPrompt.text} <hr/> Wax lyrical in response <input placeholder="here" type="text" onChange={this.handleInputChange} name="poemInput"/> and then click <input type="submit" value="here" disabled={!this.state.poemInputValid}/>.<br/>
+                  <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> "{this.state.poemPrompt.text}" <hr/> You should now wax lyrical in response <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="poemInput"/> and then click <input type="submit" value="here" disabled={!this.state.poemInputValid}/>.<br/>
                   <FormErrors formErrors={this.state.formErrors} />
                   </label>
                 </form>)

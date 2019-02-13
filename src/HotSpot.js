@@ -100,15 +100,15 @@ class HotSpot extends Component {
                 onMouseEnter={this.truthifyCursorOverPopup}
                 onMouseLeave={this.falsifyCursorOverPopup}
                 style={this.state.showPopup
-                   ? {top: "3%", left: "0%", visibility: "visible", opacity: this.state.popupOpacity}
+                   ? {bottom:"63%", visibility: "visible", opacity: this.state.popupOpacity}
                    : null}>
-            <p>{organ.title}</p>
+            <h4>{organ.title}</h4>
               <img onClick={
                 floatingManOpacity >= 1
                 ? this.handleOrganThumbnailClick
                 :null
               }
-                src={organ.thumbnail} alt={organ.organ}/>
+                src={organ.thumbnail} alt={organ.organ}/><br/><br/>
               <div>{organ.quotation}</div>
              </div>
           }
