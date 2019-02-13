@@ -7,6 +7,7 @@ class HotSpot extends Component {
     cursorOverPopup: false,
     showPopup: false,
     popupOpacity: 0,
+    thumbnailGlow: false
   }
 
   truthifyCursorOverHotspot = () => {
@@ -26,7 +27,13 @@ class HotSpot extends Component {
         }, 18)
       }
     }, 700)
+    );
+    setTimeout(()=>
+      this.setState({
+        thumbnailGlow: true
+      }), 6000
     )
+
   }
 
   falsifyCursorOverHotspot = () => {
@@ -37,7 +44,8 @@ class HotSpot extends Component {
       if (this.state.cursorOverHotspot === false && this.state.cursorOverPopup === false) {
         this.setState({
           showPopup: false,
-          popupOpacity: 0
+          popupOpacity: 0,
+          thumbnailGlow: false
         })
       } else if (this.state.cursorOverHotspot === false && this.state.cursorOverPopup === true) {
         this.setState({
@@ -94,23 +102,37 @@ class HotSpot extends Component {
                     : "poem-container")}
                 onMouseEnter={this.truthifyCursorOverHotspot}
                 onMouseLeave={this.falsifyCursorOverHotspot}
-                style={{top: organ.top, left: organ.left}}
+                style={{top: `${organ.top}%`, left: `${organ.left}%`}}
                 id={organ.id}></div>
-          {<div className="popup popup-background"
+          {<div className="popup"
                 onMouseEnter={this.truthifyCursorOverPopup}
                 onMouseLeave={this.falsifyCursorOverPopup}
-                style={this.state.showPopup
-                   ? {bottom:"63%", visibility: "visible", opacity: this.state.popupOpacity}
-                   : null}>
-            <h4>{organ.title}</h4>
-              <img onClick={
-                floatingManOpacity >= 1
-                ? this.handleOrganThumbnailClick
-                :null
-              }
-                src={organ.thumbnail} alt={organ.organ}/><br/><br/>
-              <div>{organ.quotation}</div>
-             </div>
+                style={
+                  organ.top < 50
+                    ? (this.state.showPopup
+                       ? {top: `${organ.top + 5}%`, left: `${organ.left - 14}%`, visibility: "visible", opacity: this.state.popupOpacity}
+                       : null)
+                    : (this.state.showPopup
+                       ? {top: `${organ.top - 52}%`, left: `${organ.left - 14}%`, visibility: "visible", opacity: this.state.popupOpacity}
+                       : null)
+                 }>
+              <div className="popup-background">
+                <h4 >{organ.title}</h4>
+                <img onClick={
+                      floatingManOpacity >= 1
+                      ? this.handleOrganThumbnailClick
+                      :null
+                      }
+                     src={organ.thumbnail}
+                     alt={organ.organ}
+                     className={this.state.thumbnailGlow
+                       ? "thumbnail"
+                       : null
+                     }/>
+                <br/><br/>
+                <div >{organ.quotation}</div>
+              </div>
+           </div>
           }
       </Fragment>
     );

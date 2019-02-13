@@ -130,7 +130,7 @@ class EasterEgg extends Component {
           },
           () => formSubmissionDelay = setTimeout(() => {
             this.handleOrganBlowupClick()
-          }, 7000))
+          }, 10000))
         )
   }
 
@@ -165,7 +165,7 @@ class EasterEgg extends Component {
                   </label>
                 </form>)
             : <form onSubmit={this.handleEmailSubmit}>
-                <label className="form-input" >Many thanks to you, wise and judicious {this.state.nameInput}, your poetic prowess has been noted and stored. Once sufficient respondents have contributed to the poem for which they will ultimately share creative responsibility with you, the completed x-Quisite Corpse will be published here (though you will have to scour these pages once again for the precise location).  However, should you wish to receive your own body text via the new organ of communication - as well as a clue to the published poem's location on this site - please enter your email address <input placeholder="here" type="email" onChange={this.handleInputChange} name="emailInput"/>. But it's really up to you, it's your life. Whether or not you've chosen to furnish your email, you should probably then click <input type="submit" value="here" disabled={!this.state.formValid}/>, or this could end up a very long day. <br/><FormErrors formErrors={this.state.formErrors} /><br/>Finally, alternatively, if in a moment of sudden pique and madness you'd prefer to scrap all your answers and return to the home page, feel free to click on the welcoming hand of doom above.
+                <label className="form-input" >Many thanks to you, wise and judicious {this.state.nameInput}, your poetic prowess has been noted and stored. Once sufficient respondents have contributed to the poem for which they will ultimately share creative responsibility with you, the completed x-Quisite Corpse will be published here (though you will have to scour these pages once again for the precise location).  However, should you wish to receive your own body text via the new organ of communication - as well as a clue to the published poem's location on this site - please enter your email address <input placeholder="here" type="email" onChange={this.handleInputChange} name="emailInput"/>. But it's really up to you, it's your life. Whether or not you've chosen to furnish your email, you should probably then click <input type="submit" value="here" disabled={!this.state.formValid}/>, or this could end up a very long day. <br/><br/><FormErrors formErrors={this.state.formErrors} /><br/>Finally, alternatively, if in a moment of sudden pique and madness you'd prefer to scrap all your answers and return to the home page, feel free to click on the welcoming hand of doom above.
                 </label>
               </form>)
           : <p className="poem">

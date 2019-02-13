@@ -69,7 +69,8 @@
   z-index: 2;
   height: 33%;
   width: 33%;
-  text-align: justify;
+  text-align: center;
+  /* text-shadow: black 0.5px 0.5px 0.5px; */
 }
 
 .popup h4 {
@@ -79,19 +80,19 @@
 }
 
 .popup img{
-  margin-left: 33%;
+  /* margin-left: 33%; */
   height: 33%;
   width: 33%;
   border-radius: 10%;
 }
 
-.popup div {
+/* .popup div {
   height: 33%;
-}
-/*
+} */
+
 .popup-background {
   background: rgba(25, 25, 25, 0.5);
-} */
+}
 
 .organ-blowup {
   display: block;
@@ -168,6 +169,44 @@ input {
 
 input.button {
   border: hidden;
+}
+
+.thumbnail {
+    /* transition-delay: 2s; */
+    /* border:1px solid white; */
+    -webkit-animation: thumbnail 2.5s ease-out infinite;
+    animation: thumbnail 2.5s ease-out infinite;
+    /* border-color: transparent; */
+}
+
+@-webkit-keyframes thumbnail {
+  from, to {
+    border-color: transparent
+  }
+  0% {
+    box-shadow: 0px 0px 15px transparent;
+  }
+  50% {
+    box-shadow: 0px 0px 15px white;
+  }
+  100% {
+    box-shadow: 0px 0px 15px transparent;
+  }
+}
+
+@keyframes thumbnail {
+  from, to {
+    border-color: transparent
+  }
+  0% {
+    box-shadow: 0px 0px 15px transparent;
+  }
+  50% {
+    box-shadow: 0px 0px 15px white;
+  }
+  100% {
+    box-shadow: 0px 0px 15px transparent;
+  }
 }
 
 /* .form-input {
