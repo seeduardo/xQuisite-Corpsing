@@ -20,7 +20,7 @@ class FloatingMan extends Component {
         floatingManOpacity: this.state.floatingManOpacity + 0.008
         })
       : clearInterval(fadeIn)
-    }, 18)
+    }, 18);
   }
 
   fadeOut = () => {

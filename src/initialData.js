@@ -401,13 +401,18 @@ perverse ‘inversion’—impotence-with-women-as-sexual-potency-with-men' - Na
     top: 27,
     left: 48.8,
     tabs: [
-      {name: "The Body Politic", content: `'The act of neurofeedback gives users an idea, an image, about their selves that is rather computerized. They describe the neurofeedback process as a "defragmentation of your computer", "cubes put in the right order", "a computer wiring me", "the program that reacts on the waves in your head", "my system is unstable", "my system resets itself over and over again". One could say that in the search for a better self the brain becomes an important partner for the user. This brain thinks for, speaks with, works on, and interferes with the user. It can split into neurotransmitters, brainwaves, neurons, substances and alpha-things. It interacts with the user’s world, life, psychology and ideas, but also the other way around. It can withhold the user from her or his real self, or it can change or cure this real self.
-      New technologies of the self give rise to new selves, stated Foucault, and in the case of the brain devices this is clearly the case. The act of manipulating the brain with a device makes people very aware of their biological constitution. First they learn that their problems are brain problems, then they see these problems visualized in their brain map, and next they interfere directly with their brains to fix these problems. In this process the brain is clearly separated from the self. But more than that, users of brain devices need more and more entities to explain their selves and their healing process.' - Jonna Brennkinmeijer`},
+      {name: "The Body Politic", content: `'Political humor can also serve society by prompting healthy skepticism and keeping the powerful honest. It can defuse harsh discourse in society by making palatable what is hard to swallow in the often-contentious political sphere. While we can easily identify distinctions between political humor and conventional news media, political humor nonetheless has a social responsibility—like the traditional press—to honor values of human dignity, truthfulness, and nonmaleficence, even while gently ribbing our institutions, our leaders, and ourselves. In this way, political humor strengthens democracy.' -Jason T Peifer`},
       {name: "Out of Body Experience", content: `'A young man was singled out from the group to take her to her cousin's place. He gave her a sign to follow him. She had already been keeping her spare robe and that was all she owned. She tucked the robe under her arm. Nobody wished her good luck or anything like that, because they did not have the slightest idea what her intentions were. The young man slowed down to keep pace with her and to have a close look at her - not exactly at her, but at a part of her. The wind now had started to blow hard and Ebla's naked ribs showed more. She could feel the breeze fondling her belly; and the young man threw a sideways glance at the naked spot.' - Nuruddin Farah`},
-      {name: "Corpus Delicti", content:`'All his life Walt Whitman believed in the science of phrenology – you know, reading the bumps on the skull. Whitman was interested in brains and skulls – thought they could tell you everything about a man’s character. Anyway, when Whitman lay dying over there in New Jersey about fifty or sixty years ago, he agreed to let them perform an autopsy on him after he was dead. A lot of people thought he was a genius, you see, and they wanted to take a look at his brain to find out if there was anything special about it. So, the day after he died, a doctor removed Whitman's brain - cut it right out of his head - and had it sent to the American Anthropometric Society to be measured and weighed. But this is where the story gets interesting. The brain arrives at the laboratory, and just as they're about to get to work on it, one of the assistants drops it on the floor. A brain isn't very tough you know. It splattered all over the place, and that was that. The brain of America’s greatest poet got swept up and thrown out with the garbage. It’s sad to think of poor Walt lying in his grave, though. All alone and without any brains.' - Paul Auster`},
-      {name: "Foreign Body", content: `'Es importante tener en cuenta que cierta sobreexigencia puede derivar, sobre todo cuando el cerebro está en desarrollo, en un trastorno compulsivo. La persona que  transita largas sesiones conectada en detrimento de otras actividades, con necesidad imperiosa de conectarse y gran malestar si no puede, con dificultades para autolimitarse y con efectos nocivos en su estado de ánimo (usualmente depresión y ansiedad), tiene los síntomas más frecuentes de este trastorno adictivo.
-      Esto no significa que los usos normales de estas tecnologías lleven a esta condición, sino que, por lo general, quienes la padecen son personas que presentan una neurobiología particular que los hace más vulnerables a caer en estas conductas compulsivas.
-      Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
+      {name: "Corpus Delicti", content:`'A couple of the soldiers kicked the bodies aside when they had done, to make sure they were all dead. When they left, they set fire to the barn. The only reason Alan Macanespie's nights were disturbed by what had happened that afternoon was that there had been an unintended witness. One of the boys was not in fact dead. He'd been squeezed into the far corner of the barn. When the shooting started, he'd been flattened under the weight of bodies, briefly passing out in the crush. And so he'd appeared dead when the soldier's boot crashed into his ribs. He'd come to as the flames were taking hold of the barn. - Val McDermid`},
+      {name: "Foreign Body", content: `'Sin quitar ni poner cosa alguna, sin oropeles verbales,
+Miguel Hidalgo y Costilla, el sacerdote filósofo, el cura
+caritativo, el capitán de multitudes, el protomártir civil,
+ha lucido en la conciencia pública como el personaje más
+típico y trascendente y de mayor influencia en la historia
+de México. Sin lugar a dudas ha sido aceptado por todo
+el hojaldre social y todas las regiones de la nación como
+espejo y emblema del conjunto del Estado nacional y de sus
+dos mil cuatrocientos municipios.' - Luis González y González`},
       {name: "The Body Text", content:
         <p>
           <br/>
@@ -425,16 +430,27 @@ perverse ‘inversion’—impotence-with-women-as-sexual-potency-with-men' - Na
     top: 15.2,
     left: 47.2,
     tabs: [
-      {name: "The Body Politic", content: `'The act of neurofeedback gives users an idea, an image, about their selves that is rather computerized. They describe the neurofeedback process as a "defragmentation of your computer", "cubes put in the right order", "a computer wiring me", "the program that reacts on the waves in your head", "my system is unstable", "my system resets itself over and over again". One could say that in the search for a better self the brain becomes an important partner for the user. This brain thinks for, speaks with, works on, and interferes with the user. It can split into neurotransmitters, brainwaves, neurons, substances and alpha-things. It interacts with the user’s world, life, psychology and ideas, but also the other way around. It can withhold the user from her or his real self, or it can change or cure this real self.
-      New technologies of the self give rise to new selves, stated Foucault, and in the case of the brain devices this is clearly the case. The act of manipulating the brain with a device makes people very aware of their biological constitution. First they learn that their problems are brain problems, then they see these problems visualized in their brain map, and next they interfere directly with their brains to fix these problems. In this process the brain is clearly separated from the self. But more than that, users of brain devices need more and more entities to explain their selves and their healing process.' - Jonna Brennkinmeijer`},
-      {name: "Out of Body Experience", content: `'Thought is not arborescent, and the brain is not a rooted or ramified matter. What are wrongly called "dendrites" do not assure the connection of neurons in a continuous fabric. The discontinuity between cells, the role of the axons, the functioning of the synapses, the existence of synaptic microfissures, the leap each message makes across these fissures, make the brain a multiplicity immersed in its plane of consistency or neuroglia, a whole uncertain, probabilistic system ("the uncertain nervous system"). Many people have a tree growing in their heads, but the brain itself is much more a grass than a tree. "The axon and the dendrite twist around each other like bindweed around brambles, with synapses at each of the thorns."' - Gilles Deleuze and Félix Guattari`},
-      {name: "Corpus Delicti", content:`'All his life Walt Whitman believed in the science of phrenology – you know, reading the bumps on the skull. Whitman was interested in brains and skulls – thought they could tell you everything about a man’s character. Anyway, when Whitman lay dying over there in New Jersey about fifty or sixty years ago, he agreed to let them perform an autopsy on him after he was dead. A lot of people thought he was a genius, you see, and they wanted to take a look at his brain to find out if there was anything special about it. So, the day after he died, a doctor removed Whitman's brain - cut it right out of his head - and had it sent to the American Anthropometric Society to be measured and weighed. But this is where the story gets interesting. The brain arrives at the laboratory, and just as they're about to get to work on it, one of the assistants drops it on the floor. A brain isn't very tough you know. It splattered all over the place, and that was that. The brain of America’s greatest poet got swept up and thrown out with the garbage. It’s sad to think of poor Walt lying in his grave, though. All alone and without any brains.' - Paul Auster`},
-      {name: "Foreign Body", content: `'Es importante tener en cuenta que cierta sobreexigencia puede derivar, sobre todo cuando el cerebro está en desarrollo, en un trastorno compulsivo. La persona que  transita largas sesiones conectada en detrimento de otras actividades, con necesidad imperiosa de conectarse y gran malestar si no puede, con dificultades para autolimitarse y con efectos nocivos en su estado de ánimo (usualmente depresión y ansiedad), tiene los síntomas más frecuentes de este trastorno adictivo.
-      Esto no significa que los usos normales de estas tecnologías lleven a esta condición, sino que, por lo general, quienes la padecen son personas que presentan una neurobiología particular que los hace más vulnerables a caer en estas conductas compulsivas.
-      Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
+      {name: "The Body Politic", content: `'Literature shows that politics remain associated with maleness in the American cultural discourse and, for a woman to be assigned or elected into an official position, she must display archetypical masculine characteristics while measuring her words and actions with a feminine tact. A first look at Nancy Pelosi's coverage in the papers in question confirmed this tightrope act. Portrayed as "very strong" and "decisive", the Speaker "knows what she wants". She is compared to Margaret Thatcher, a symbol of the masculine woman in politics, and is described as "more into the stick [than the carrot]"; but the woman with "the spine of steel" also possesses a "heart of gold". This tension between the two opposite personalities, one predominantly masculine and the other clearly – and stereotypically – feminine, characterizes the coverage.' - Yasmine Dabbous and Amy Ladley`},
+      {name: "Out of Body Experience", content: `'The false conflict between those who advocate randomised trials in all situations and those who believe observational data provide sufficient evidence needs to be replaced with mutual recognition of their complementary roles. The fact that many surgical techniques or technologies were introduced into the field of spine surgery without randomised trials or prospective cohort comparisons makes obvious an even increased need for spine registries compared to joint arthroplasty. An essential methodological prerequisite for a registry is a common terminology for reporting results and a sophisticated technology that networks all participants so that one central data pool is created and accessed. Recognising this need, the Spine Society of Europe has researched and developed Spine Tango, the first European spine registry, which can be accessed under www.eurospine.org.' - C Röder, U Müller and M Aebi`},
+      {name: "Corpus Delicti", content:`'Thomas unlocked the door and ushered the three agents into the papery silence of the cubicle that was his office. Unlike some of his colleagues, he had never made a "home" of his office. He had no comfy chairs for graduate groupies, no prints of Nietzsche, Skinner or Che Guevara, just books and sticky-notes. The agents scanned his shelves. The attractive blond ran an appreciative finger down the spine of his first and only work, Through the Brain Darkly. Agent Atta seemed to be looking for evidence of pornography or drug use. Either Dan Gerard was a restless man or he was distracted by the chaos. A mild OCD perhaps?' - Scott Bakker`},
+      {name: "Foreign Body", content: `'Armados con fusiles y escasas municiones pero ansiosos de luchar por la
+Libertad, salimos para el frente. Nuestra preocupación no era la comida, la
+ropa ni el dinero, sino llegar pronto a Teruel. Con este ánimo nos encontramos
+en el combate de Sarrión, y este espíritu hizo posible la victoria que allí se
+obtuvo. La Columna de Hierro que surge de la victoria de Sarrión, es el nombre que, nacido espontáneamente, nos ha de agrupar a todos por un largo espacio de tiempo. Sin jefes que descuellen, pero con un puñado de compañeros,
+capaces y esforzados, la Columna va salvando los obstáculos que se le presentan, y así, al mismo tiempo que se avanzan kilómetros, vase completando su
+organización.' - José Segarra`},
       {name: "The Body Text", content:
-        <p>
-          <br/>
+        <p>So that the truant boy may go steady with the State,<br/>
+So that in his spine a memory of wings<br/>
+Will make his shoulders tense & bend<br/>
+Like a thing already flown<br/>
+When the bracelets of another school of love<br/>
+Are fastened to his wrists,<br/>
+Make a law that doesn’t have to wait<br/>
+Long until someone comes along to break it.<br/><br/>
+
+Larry Levis
         </p>
       },
     ]
@@ -457,8 +473,19 @@ perverse ‘inversion’—impotence-with-women-as-sexual-potency-with-men' - Na
       Esto no significa que los usos normales de estas tecnologías lleven a esta condición, sino que, por lo general, quienes la padecen son personas que presentan una neurobiología particular que los hace más vulnerables a caer en estas conductas compulsivas.
       Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
       {name: "The Body Text", content:
-        <p>
-          <br/>
+        <p>Sick in bed with a sore throat,  <br/>
+I can’t get out of my mind  <br/>
+the image of the cat  <br/>
+harpsichord from the eighteenth century,  <br/>
+soothing a prince with laughter.  <br/>  <br/>
+
+It worked like this: the tails of them attached  <br/>
+to the strings of the instrument  <br/>
+were pulled by different notes, and the difference  <br/>
+between the way the cats  <br/>
+cried was music.  <br/>  <br/>
+
+Katie Peterson
         </p>
       },
     ]
@@ -482,7 +509,26 @@ perverse ‘inversion’—impotence-with-women-as-sexual-potency-with-men' - Na
       Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
       {name: "The Body Text", content:
         <p>
-          <br/>
+        Here come the sidewalk boss again<br/>
+Telling me how I can't cave in<br/>
+That I'm a study in black<br/>
+Need a pat on the back<br/>
+I look up and smile<br/>
+A picture of dissatisfaction<br/>
+That he can only see as a junkie<br/>
+Though I might be straight as an arrow<br/>
+He's busy shaking hands with my monkey<br/>
+Well I go in the car<br/>
+Straight to the bar<br/>
+Where my sweetie pours the beer<br/>
+For the millions of fans ignoring the bands<br/>
+He's in my ear<br/>
+Wants me to live in denial<br/>
+Says you've gotta settle for something<br/>
+Though it might not be really living<br/>
+Anything is better than nothing<br/><br/>
+
+Elliott Smith
         </p>
       },
     ]
@@ -506,7 +552,27 @@ perverse ‘inversion’—impotence-with-women-as-sexual-potency-with-men' - Na
       Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
       {name: "The Body Text", content:
         <p>
-          <br/>
+        A wanderer is man from his birth.<br/>
+He was born in a ship <br/>
+On the breast of the river of Time; <br/>
+Brimming with wonder and joy <br/>
+He spreads out his arms to the light,<br/>
+Rivets his gaze on the banks of the stream.<br/> <br/>
+
+As what he sees is, so have his thoughts been. <br/>
+Whether he wakes, <br/>
+Where the snowy mountainous pass,<br/>
+Echoing the screams of the eagles, <br/>
+Hems in its gorges the bed <br/>
+Of the new-born clear-flowing stream;<br/>
+Whether he first sees light <br/>
+Where the river in gleaming rings<br/>
+Sluggishly winds through the plain; <br/>
+Whether in sound of the swallowing sea — <br/>
+As is the world on the banks, <br/>
+So is the mind of the man. <br/><br/>
+
+          Matthew Arnold
         </p>
       },
     ]
@@ -530,7 +596,22 @@ perverse ‘inversion’—impotence-with-women-as-sexual-potency-with-men' - Na
       Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
       {name: "The Body Text", content:
         <p>
-          <br/>
+        Didn’t Sappho say her guts clutched up like this?<br/>
+Before a face suddenly numinous,<br/>
+her eyes watered, knees melted. Did she lactate   <br/>
+again, milk brought down by a girl’s kiss?   <br/>
+It’s documented torrents are unloosed<br/>
+by such events as recently produced<br/>
+not the wish, but the need, to consume, in us,   <br/>
+one pint of Maalox, one of Kaopectate.<br/>
+My eyes and groin are permanently swollen, <br/>
+I’m alternatingly brilliant and witless<br/>
+—and sleepless: bed is just a swamp to roll in.   <br/>
+Although I’d cream my jeans touching your breast,   <br/>
+sweetheart, it isn’t lust; it’s all the rest<br/>
+of what I want with you that scares me shitless.<br/><br/>
+
+Marilyn Hacker
         </p>
       },
     ]
@@ -573,7 +654,21 @@ perverse ‘inversion’—impotence-with-women-as-sexual-potency-with-men' - Na
       Borges (otra vez Borges) describió en uno de sus relatos a la de Babel como una biblioteca total e interminable, con una naturaleza informe y caótica, pero que a través de ella el universo estaba justificado, que con ella el universo había usurpado bruscamente las dimensiones ilimitadas de la esperanza. Muchos leyeron esto como una alegoría anticipatoria de Internet. Parece ser que también, cuando se trata de nuevas tecnologías y neurociencias, se debe invocar al maestro.' - Facundo Manes and Mateo Niro`},
       {name: "The Body Text", content:
         <p>
+        My mouth is snow slowly caking that stiff pigeon.<br/>
+My mouth, the intricately moist machinery of a plant.<br/>
+I have forgotten if I ever had a mouth.<br/><br/>
+
+I have two mouths.<br/>
+One like warm rain;<br/>
+or wind manipulating the worn limbs of an elm.<br/><br/>
+
+My mouth knows nothing of music.<br/>
+Or of the oils of love.<br/><br/>
+
+Its shape is the shadow of innumerable pigeons;<br/>
+its words, at times, their bones.<br/>
           <br/>
+          Paul Carroll
         </p>
       },
     ]

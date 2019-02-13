@@ -7,7 +7,20 @@ class HotSpot extends Component {
     cursorOverPopup: false,
     showPopup: false,
     popupOpacity: 0,
-    thumbnailGlow: false
+    thumbnailGlow: false,
+    secretGlow: false,
+    superSecretGlow: false
+  }
+
+  componentDidMount() {
+    setTimeout(()=>
+      this.setState({
+        secretGlow: true
+      }), 30000);
+    setTimeout(()=>
+      this.setState({
+        superSecretGlow: true
+      }), 40000)
   }
 
   truthifyCursorOverHotspot = () => {
@@ -33,7 +46,6 @@ class HotSpot extends Component {
         thumbnailGlow: true
       }), 6000
     )
-
   }
 
   falsifyCursorOverHotspot = () => {
@@ -98,8 +110,14 @@ class HotSpot extends Component {
               organ.id < 17
                 ? "HotSpot"
                 : (organ.id === 17
-                    ? "EasterEgg"
-                    : "poem-container")}
+                    ? (this.state.secretGlow
+                      ? "EasterEgg secret"
+                      : "EasterEgg")
+                    : (this.state.superSecretGlow
+                      ? "poem-container secret"
+                      : "poem-container")
+                  )
+                }
                 onMouseEnter={this.truthifyCursorOverHotspot}
                 onMouseLeave={this.falsifyCursorOverHotspot}
                 style={{top: `${organ.top}%`, left: `${organ.left}%`}}

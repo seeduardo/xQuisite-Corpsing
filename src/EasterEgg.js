@@ -160,7 +160,7 @@ class EasterEgg extends Component {
                   </label>
                 </form>
               : <form onSubmit={this.handleNameAndPoemSubmit} name="submittedPoemLine">
-                  <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> "{this.state.poemPrompt.text}" <hr/> You should now wax lyrical in response <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="poemInput"/> and then click <input type="submit" value="here" disabled={!this.state.poemInputValid}/>.<br/>
+                  <label className="form-input" >As a prospective x-Quisite Corpser, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> <h3>"{this.state.poemPrompt.text}"</h3> <hr/> You should now wax lyrical in response to the above <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="poemInput"/> and then click <input type="submit" value="here" disabled={!this.state.poemInputValid}/>.<br/>
                   <FormErrors formErrors={this.state.formErrors} />
                   </label>
                 </form>)
