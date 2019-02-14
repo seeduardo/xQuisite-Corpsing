@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
+let secretInterval
+
 class HotSpot extends Component {
 
   state = {
@@ -13,24 +15,30 @@ class HotSpot extends Component {
   }
 
   componentDidMount() {
-    setTimeout(() =>
-      this.setState({
-        secretGlow: true
-      },
-      () => setTimeout(() =>
+    secretInterval = setInterval(() => {
+      setTimeout(() =>
         this.setState({
-          secretGlow: false
-        }), 5000)
-    ), 30000);
-    setTimeout(() =>
-      this.setState({
-        superSecretGlow: true
-      },
-      () => setTimeout(() =>
-        this.setState({
-          superSecretGlow: false
-        }), 5000)
-    ), 40000)
+          secretGlow: true
+        },
+        () => setTimeout(() =>
+          this.setState({
+            secretGlow: false
+          }), 5000)
+      ), 10000)
+      // setTimeout(() =>
+      //   this.setState({
+      //     superSecretGlow: true
+      //   },
+      //   () => setTimeout(() =>
+      //     this.setState({
+      //       superSecretGlow: false
+      //     }), 5000)
+      // ), 20000)
+    }, 20000)
+  }
+
+  componentWillUnmount() {
+    clearInterval(secretInterval)
   }
 
   truthifyCursorOverHotspot = () => {

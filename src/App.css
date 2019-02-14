@@ -171,7 +171,7 @@ input.button {
   border: hidden;
 }
 
-.thumbnail, .secret {
+.thumbnail {
     /* transition-delay: 2s; */
     /* border:1px solid white; */
     opacity: 1;
@@ -207,6 +207,46 @@ input.button {
   }
   100% {
     box-shadow: 0px 0px 15px transparent;
+  }
+}
+
+.secret {
+    /* transition-delay: 2s; */
+    /* border: 0.2px solid rgba(225, 225, 225, 0.8); */
+    /* border: 0.2px!important; */
+    opacity: 0.4;
+    -webkit-animation: secret 2.5s ease-out infinite;
+    animation: secret 2.5s ease-out infinite;
+    /* border-color: transparent; */
+}
+
+@-webkit-keyframes secret {
+  from, to {
+    border-color: transparent
+  }
+  0% {
+    box-shadow: 0px 0px 30px 10px transparent;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 10px white;
+  }
+  100% {
+    box-shadow: 0px 0px 30px 10px transparent;
+  }
+}
+
+@keyframes secret {
+  from, to {
+    border-color: transparent
+  }
+  0% {
+    box-shadow: 0px 0px 30px 10px transparent;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 10px white;
+  }
+  100% {
+    box-shadow: 0px 0px 30px 10px transparent;
   }
 }
 
