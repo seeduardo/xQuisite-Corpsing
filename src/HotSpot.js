@@ -13,14 +13,24 @@ class HotSpot extends Component {
   }
 
   componentDidMount() {
-    setTimeout(()=>
+    setTimeout(() =>
       this.setState({
         secretGlow: true
-      }), 30000);
-    setTimeout(()=>
+      },
+      () => setTimeout(() =>
+        this.setState({
+          secretGlow: false
+        }), 5000)
+    ), 30000);
+    setTimeout(() =>
       this.setState({
         superSecretGlow: true
-      }), 40000)
+      },
+      () => setTimeout(() =>
+        this.setState({
+          superSecretGlow: false
+        }), 5000)
+    ), 40000)
   }
 
   truthifyCursorOverHotspot = () => {
