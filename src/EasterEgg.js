@@ -111,6 +111,9 @@ class EasterEgg extends Component {
 
   handleEmailSubmit = (event) => {
     event.preventDefault();
+    this.setState({
+      submittedAllData: true
+    });
     let firstLineId = this.state.poemPrompt.first_line_id
       ? this.state.poemPrompt.first_line_id
       : this.state.poemPrompt.id
@@ -124,13 +127,9 @@ class EasterEgg extends Component {
     		first_line_id: firstLineId
       })
     })
-      .then(() =>
-          this.setState({
-            submittedAllData: true
-          },
-          () => formSubmissionDelay = setTimeout(() => {
+      .then(() => formSubmissionDelay = setTimeout(() => {
             this.handleOrganBlowupClick()
-          }, 13000))
+          }, 15000)
         )
   }
 
@@ -154,17 +153,17 @@ class EasterEgg extends Component {
         {!this.state.submittedAllData
           ? (!this.state.submittedPoemLine
             ? (!this.state.submittedName
-              ? <form onSubmit={this.handleNameAndPoemSubmit} name="submittedName">
+              ? <form autoComplete="off" onSubmit={this.handleNameAndPoemSubmit} name="submittedName">
                   <label className="form-input" >Welcome. You have stumbled upon the true core of xQuisite Corpsing, which is as much the designation of where you are as it is the name of an activity - an activity based upon mystical ancient lore (well, <a target="_blank" and rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Exquisite_corpse">sort of</a>). On the one hand, you could now click the bony finger in the image above to go back and just continue exploring the body. On the other hand, you could participate in xQuisite Corpsing by entering your name <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="nameInput"/> and then clicking <input type="submit" value="here" disabled={!this.state.nameInputValid}/>. Fancy taking the chance? Do you dare?<br/><br/>
                   <FormErrors formErrors={this.state.formErrors} />
                   </label>
                 </form>
-              : <form onSubmit={this.handleNameAndPoemSubmit} name="submittedPoemLine">
+              : <form autoComplete="off" onSubmit={this.handleNameAndPoemSubmit} name="submittedPoemLine">
                   <label className="form-input" >As a prospective xQuisite Corpseer, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> <h3>"{this.state.poemPrompt.text}"</h3> <hr/> You should now wax lyrical in response to the above line of poetry (or whatever it might be) by typing <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="poemInput"/>, and then click <input type="submit" value="here" disabled={!this.state.poemInputValid}/>. In this way, you contribute to the creation of a collaborative but mostly unseen poetic instance, known forever more as an xQuisite Corpse.<br/>
                   <FormErrors formErrors={this.state.formErrors} />
                   </label>
                 </form>)
-            : <form onSubmit={this.handleEmailSubmit}>
+            : <form autoComplete="off" onSubmit={this.handleEmailSubmit}>
                 <label className="form-input" >Many thanks to you, wise and judicious {this.state.nameInput}, your poetic prowess has been noted and stored. Once sufficient respondents have contributed to the poem for which they will ultimately share creative responsibility with you, the completed xQuisite Corpse will be published here (though you will have to scour these pages once again for the precise location). However, should you wish to receive your own body text via the new organ of communication - as well as a clue to the published poem's location on this site - please enter your email address <input placeholder="here" type="email" onChange={this.handleInputChange} name="emailInput"/>. But it's really up to you, it's your life. Whether or not you've chosen to furnish your email, you should probably then click <input type="submit" value="here" disabled={!this.state.formValid}/>, or this could end up a very long day. <br/><br/><FormErrors formErrors={this.state.formErrors} /><br/>Finally, alternatively, if in a moment of sudden pique and madness you'd prefer to scrap all your answers and return to the home page, feel free to click on the welcoming hand of doom above.
                 </label>
               </form>)
