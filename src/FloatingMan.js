@@ -38,10 +38,10 @@ class FloatingMan extends Component {
           <img src={floatingMan} className="floating-man-image" alt="logo" />
           {this.state.initialData.map(
               organ => <HotSpot floatingManOpacity={this.state.floatingManOpacity}
-                                fadeOut={this.fadeOut}
-                                organ={organ}
-                                key={organ.id}
-                                handleOrganClick={this.props.handleOrganClick}/>
+                 fadeOut={this.fadeOut}
+                 organ={organ}
+                 key={organ.id}
+                 handleOrganClick={this.props.handleOrganClick}/>
             )}
       </div>
     );

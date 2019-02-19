@@ -15,27 +15,42 @@ class HotSpot extends Component {
   }
 
   componentDidMount() {
-    secretInterval = setInterval(() => {
-      setTimeout(() =>
-        this.setState({
-          secretGlow: true
-        },
-        () => setTimeout(() =>
-          this.setState({
-            secretGlow: false
-          }), 5000)
-      ), 10000)
-      // setTimeout(() =>
-      //   this.setState({
-      //     superSecretGlow: true
-      //   },
-      //   () => setTimeout(() =>
-      //     this.setState({
-      //       superSecretGlow: false
-      //     }), 5000)
-      // ), 20000)
-    }, 20000)
+    // secretInterval = setInterval(() => {
+    //   setTimeout(() =>
+    //     this.setState({
+    //       secretGlow: true
+    //     },
+    //     () => setTimeout(() =>
+    //       this.setState({
+    //         secretGlow: false
+    //       }), 5000)
+    //   ), 10000)
+    //   // setTimeout(() =>
+    //   //   this.setState({
+    //   //     superSecretGlow: true
+    //   //   },
+    //   //   () => setTimeout(() =>
+    //   //     this.setState({
+    //   //       superSecretGlow: false
+    //   //     }), 5000)
+    //   // ), 20000)
+    // }, 20000)
   }
+
+  // if (this.state.cursorOverHotspot) {
+  //   this.setState({
+  //     secretGlow: false
+  //   })
+  // } else {
+  //   setTimeout(() =>
+  //     this.setState({
+  //       secretGlow: true
+  //     },
+  //     () => setTimeout(() =>
+  //       this.setState({
+  //         secretGlow: false
+  //       }), 5000)
+  //   ), 10000)}
 
   componentWillUnmount() {
     clearInterval(secretInterval)
@@ -59,11 +74,13 @@ class HotSpot extends Component {
       }
     }, 700)
     );
-    setTimeout(()=>
-      this.setState({
-        thumbnailGlow: true
-      }), 6000
-    )
+    setTimeout(() => {
+      if (this.state.popupOpacity >= 1) {
+        this.setState({
+          thumbnailGlow: true
+        })
+      }
+    }, 7000)
   }
 
   falsifyCursorOverHotspot = () => {
@@ -100,13 +117,14 @@ class HotSpot extends Component {
 
   falsifyCursorOverPopup = () => {
     this.setState({
-      cursorOverPopup: false,
+      cursorOverPopup: false
     },
     () => setTimeout(() => {
       if (!this.state.cursorOverHotspot) {
       this.setState({
         showPopup:false,
-        popupOpacity: 0
+        popupOpacity: 0,
+        thumbnailGlow: false
         })
       }
     }, 500)
