@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 
-let secretInterval
+// let secretInterval
+let secretTimer
 
 class HotSpot extends Component {
 
@@ -15,27 +16,38 @@ class HotSpot extends Component {
   }
 
   componentDidMount() {
-    // secretInterval = setInterval(() => {
-    //   setTimeout(() =>
-    //     this.setState({
-    //       secretGlow: true
-    //     },
-    //     () => setTimeout(() =>
-    //       this.setState({
-    //         secretGlow: false
-    //       }), 5000)
-    //   ), 10000)
-    //   // setTimeout(() =>
-    //   //   this.setState({
-    //   //     superSecretGlow: true
-    //   //   },
-    //   //   () => setTimeout(() =>
-    //   //     this.setState({
-    //   //       superSecretGlow: false
-    //   //     }), 5000)
-    //   // ), 20000)
-    // }, 20000)
+    secretTimer = setTimeout(
+      () => this.setState({
+          secretGlow: true
+        },
+        () => setTimeout(() =>
+          this.setState({
+            secretGlow: false
+          }), 13000)
+      ), 66600)
   }
+
+    // setTimeout(() =>
+    //   this.setState({
+    //     superSecretGlow: true
+    //   },
+    //   () => setTimeout(() =>
+    //     this.setState({
+    //       superSecretGlow: false
+    //     }), 5000)
+    // ), 20000)
+
+  // secretTimer = setTimeout(
+  //   () =>
+  //       this.setState({
+  //         secretGlow: true
+  //       },
+  //       () => setTimeout(() =>
+  //             this.setState({
+  //               secretGlow: false
+  //             }), 5000)
+  //     ), 30000
+  // )
 
   // if (this.state.cursorOverHotspot) {
   //   this.setState({
@@ -53,7 +65,7 @@ class HotSpot extends Component {
   //   ), 10000)}
 
   componentWillUnmount() {
-    clearInterval(secretInterval)
+    clearTimeout(secretTimer)
   }
 
   truthifyCursorOverHotspot = () => {
@@ -80,7 +92,8 @@ class HotSpot extends Component {
           thumbnailGlow: true
         })
       }
-    }, 7000)
+    }, 7000);
+    clearTimeout(secretTimer)
   }
 
   falsifyCursorOverHotspot = () => {
