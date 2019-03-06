@@ -43,11 +43,14 @@ class Organ extends Component {
     const {organ} = this.props
     return (
       <div style={{opacity: this.state.organOpacity, marginTop: "2vh"}}>
-        <img
-        className="organ-blowup" onClick={this.state.organOpacity >= 1
-          ? this.handleOrganBlowupClick
-          : null
-        } alt={organ.organ} src={organ.image}/>
+        <figure>
+          <figcaption>Image by Jacques Fabien Gautier d'Agoty, courtesy of the Wellcome Collection</figcaption>
+          <img
+          className="organ-blowup" onClick={this.state.organOpacity >= 1
+            ? this.handleOrganBlowupClick
+            : null
+          } alt={organ.organ} src={organ.image}/>
+        </figure>
         <div className="tab" >{
           organ.tabs.map(
             tab => <OrganTab handleTabClick={this.handleTabClick}  clicked={
@@ -80,6 +83,7 @@ class Organ extends Component {
                   >{organ.tabs.find(tab => tab.name === this.state.clickedTab).content} </p>
               </div>
             :null}
+
       </div>
     );
   }

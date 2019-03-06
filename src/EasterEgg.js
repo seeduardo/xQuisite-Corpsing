@@ -138,17 +138,20 @@ class EasterEgg extends Component {
     return (
       <div style={{opacity: this.state.organOpacity, marginTop: "2vh"}}>
         <div>
-          <img
-            className="organ-blowup" onClick={
-              () => {
-                clearTimeout(formSubmissionDelay);
-                if (this.state.organOpacity >= 1) {
-                  this.handleOrganBlowupClick()
+          <figure>
+            <figcaption>Image by Jacques Fabien Gautier d'Agoty, courtesy of the Wellcome Collection</figcaption>
+            <img
+              className="organ-blowup" onClick={
+                () => {
+                  clearTimeout(formSubmissionDelay);
+                  if (this.state.organOpacity >= 1) {
+                    this.handleOrganBlowupClick()
+                  }
                 }
               }
-            }
-            alt={organ.organ}
-            src={organ.image}/>
+              alt={organ.organ}
+              src={organ.image}/>
+          </figure>
         </div>
         {!this.state.submittedAllData
           ? (!this.state.submittedPoemLine

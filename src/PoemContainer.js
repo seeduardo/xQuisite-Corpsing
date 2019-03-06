@@ -50,12 +50,15 @@ class PoemContainer extends Component {
     return(
       <div style={{opacity: this.state.poemContainerOpacity, marginTop: "2vh"}}>
         <div>
-          <img
-          className="organ-blowup" onClick={this.state.poemContainerOpacity >= 1
-            ? this.handleOrganBlowupClick
-            : null
-            } alt={organ.organ} src={organ.image}/>
-        {this.state.allLines.map(
+          <figure>
+            <figcaption>Image by Jacques Fabien Gautier d'Agoty, courtesy of the Wellcome Collection</figcaption>
+            <img
+            className="organ-blowup" onClick={this.state.poemContainerOpacity >= 1
+              ? this.handleOrganBlowupClick
+              : null
+              } alt={organ.organ} src={organ.image}/>
+          </figure>
+          {this.state.allLines.map(
           poem => <Poem poem={poem} key={poem.id}/>
           )}
         </div>

@@ -45,7 +45,7 @@ const initialData = [
     title: "Manoeuvre, Manufacture, Manipulate",
     image: `${imgUrlRoot + 'Hand.jpg'}`,
     thumbnail: `${imgUrlRoot + 'Hand_tn.jpg'}`,
-    quotation: "'Possession of a fully developed hand profoundly transformed the relationship of the human being to its own body, thus altering the relationship between humans and the natural world. The interaction of the hand with the rest of the body brought about self-consciousness and laid the foundations for the unique sense of agency that is experienced by humans.' - of Raymond Tallis",
+    quotation: "'Possession of a fully developed hand profoundly transformed the relationship of the human being to its own body, thus altering the relationship between humans and the natural world. The interaction of the hand with the rest of the body brought about self-consciousness and laid the foundations for the unique sense of agency that is experienced by humans.' -  Raymond Tallis",
     top: 46,
     left: 75.9,
     tabs: [

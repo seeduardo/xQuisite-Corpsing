@@ -177,10 +177,10 @@ class HotSpot extends Component {
                 style={
                   organ.top < 50
                     ? (this.state.showPopup
-                       ? {top: `${organ.top + 5}%`, left: `${organ.left - 14}%`, visibility: "visible", opacity: this.state.popupOpacity}
+                       ? {top: `${organ.top + 4}%`, left: `${organ.left - 22}%`, visibility: "visible", opacity: this.state.popupOpacity}
                        : null)
                     : (this.state.showPopup
-                       ? {top: `${organ.top - 52}%`, left: `${organ.left - 14}%`, visibility: "visible", opacity: this.state.popupOpacity}
+                       ? {top: `${organ.top - 62}%`, left: `${organ.left - 22}%`, visibility: "visible", opacity: this.state.popupOpacity}
                        : null)
                  }>
               <div className="popup-background">

@@ -68,8 +68,9 @@
   position: absolute;
   z-index: 2;
   height: 33%;
-  width: 33%;
+  width: 50%;
   text-align: center;
+  font-size: 12.5px;
   /* text-shadow: black 0.5px 0.5px 0.5px; */
 }
 
@@ -102,6 +103,21 @@
   margin-right: auto;
   /* width: 50%; */
   border: 1px solid white;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  color: white;
+  font-size: 7px;
+  border: 1px solid white;
+  max-width: 42vh;
+  line-height: 1.3em;
 }
 
 .tab {
@@ -155,7 +171,8 @@
   margin-top: auto;
   max-width: 42vh;
   overflow: auto;
-  max-height: 33vh;
+  max-height: 30vh;
+  font-size: 12.5px;
 }
 
 input {
@@ -249,6 +266,8 @@ input.button {
     box-shadow: 0px 0px 30px 10px transparent;
   }
 }
+
+
 
 /* .form-input {
   color: white;
