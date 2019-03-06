@@ -171,7 +171,7 @@ class EasterEgg extends Component {
                 </label>
               </form>)
           : <p className="poem">
-              Praise be unto you, venerable {this.state.nameInput}, for your contribution to the poetic majesty of this otherwise callous existence. As mentioned, your offering will appear somewhere on this site once contributions have reached the sacred number, and if you (correctly) entered your email, you will receive it that way at that point also. In the meantime, giving the hand above the old skeletal high five with your cursor (that is, clicking on it) will take you to the home page so that your exploration of the body may continue to please, tease and appease you...
+              Praise be unto you, venerable {this.state.nameInput}, for your contribution to the poetic majesty of this otherwise callous existence. As mentioned, your offering will appear somewhere on this site once contributions have reached the sacred number, and if you (correctly) entered your email, you will receive it that way at that point also. In the meantime, giving the hand above the old skeletal high five with your cursor (that is, clicking on it) will take you to the home page so that your exploration of the body may continue to please, tease and appease you....
             </p>}
 
       </div>
