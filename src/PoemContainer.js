@@ -58,6 +58,7 @@ class PoemContainer extends Component {
               : null
               } alt={organ.organ} src={organ.image}/>
           </figure>
+          <div className="poem-list">A fine discovery you have made, oh xQuisite xPlorer.... Here is a list of all the xQuisite Corpses generated up till now. The first line of each creation was evoked from the mystery of the ether, but the remaining lines were forged by the mentioned xQuisite Corpseers respectively.</div>
           {this.state.allLines.map(
           poem => <Poem poem={poem} key={poem.id}/>
           )}

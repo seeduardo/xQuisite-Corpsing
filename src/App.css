@@ -159,11 +159,10 @@ figcaption {
   color: white;
 }
 
-.tabcontent, .form-input, .poem {
+.tabcontent, .form-input, .poem, .poem-list {
   display: block;
   padding: 10px 12px;
   border: 1px solid white;
-  /* border-top: none; */
   color: white;
   margin-left: auto;
   margin-right: auto;
@@ -171,11 +170,22 @@ figcaption {
   margin-top: auto;
   max-width: 42vh;
   overflow: auto;
-  max-height: 30vh;
   font-size: 12.5px;
 }
 
-input {
+.tabcontent {
+  max-height: 30vh;
+}
+
+.form-input {
+  max-height: 37vh;
+}
+
+/* .poem {
+  max-height: 70vh;
+} */
+
+input, .poem-details {
   font-family: fantasy;
   background-color: #22211d;
   font-weight: bold;
