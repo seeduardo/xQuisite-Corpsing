@@ -15,7 +15,7 @@ class EasterEgg extends Component {
     poemInput: '',
     emailInput: '',
     poemPrompt: {},
-    formErrors: {name: '', 'line of poetry': '', email: ''},
+    formErrors: {name: '', 'response': '', email: ''},
     nameInputValid: false,
     poemInputValid: false,
     emailInputValid:false,
@@ -80,7 +80,7 @@ class EasterEgg extends Component {
         break;
       case 'poemInput':
         poemInputValid = value.length >= 1 && value.length <= 60;
-        fieldValidationErrors['line of poetry'] = poemInputValid ? '': ` is perhaps a little on the short (or maybe even long) side, n'est-ce pas?`;
+        fieldValidationErrors['response'] = poemInputValid ? '': `, however poetic, is a touch on the short (maybe even long) side, n'est-ce pas?`;
         break;
       case 'emailInput':
         emailInputValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i) || value === '';
@@ -157,13 +157,13 @@ class EasterEgg extends Component {
           ? (!this.state.submittedPoemLine
             ? (!this.state.submittedName
               ? <form autoComplete="off" onSubmit={this.handleNameAndPoemSubmit} name="submittedName">
-                  <label className="form-input" >Welcome. You have stumbled upon the true core of xQuisite Corpsing, which is as much the designation of where you are as it is the name of an activity - an activity based upon mystical ancient lore (well, <a target="_blank" and rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Exquisite_corpse">sort of</a>). On the one hand, you could now click the bony finger in the image above to go back and just continue exploring the body. On the other hand, you could participate in xQuisite Corpsing by entering your name <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="nameInput"/> and then clicking <input type="submit" value="here" disabled={!this.state.nameInputValid}/>. Fancy taking the chance? Do you dare?<br/><br/>
+                  <label className="form-input" >Welcome. You have stumbled upon the true core of xQuisite Corpsing, an activity based upon mystical ancient lore (well, <a target="_blank" and rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Exquisite_corpse">sort of</a>).<br/><br/>On the one hand, you could now click the bony finger in the image above to go back, and just continue exploring the body. On the other hand, participate in xQuisite Corpsing by entering your name <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="nameInput"/> and then clicking <input type="submit" value="here" disabled={!this.state.nameInputValid}/>. Fancy taking the chance? Do you dare?<br/><br/>
                   <FormErrors formErrors={this.state.formErrors} />
                   </label>
                 </form>
               : <form autoComplete="off" onSubmit={this.handleNameAndPoemSubmit} name="submittedPoemLine">
-                  <label className="form-input" >As a prospective xQuisite Corpseer, you have come to the right place, oh {this.state.nameInput} - and furthermore, just at the right time. Contra Freud, anatomy is not destiny, so how do you respond to the following poetic accusation?<hr/> <h3>"{this.state.poemPrompt.text}"</h3> <hr/> You should now wax lyrical in response to the above line of poetry (or whatever it might be) by typing <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="poemInput"/>, and then click <input type="submit" value="here" disabled={!this.state.poemInputValid}/>. In this way, you contribute to the creation of a collaborative but mostly unseen poetic instance, known forever more as an xQuisite Corpse.<br/>
-                  <FormErrors formErrors={this.state.formErrors} />
+                  <label className="form-input" >As a prospective xQuisite Corpseer, oh {this.state.nameInput}, you have come to the right place at just the right time. Contra Freud, anatomy is not destiny, so what do you make of the following poetic prompt?<hr/> <h3>"{this.state.poemPrompt.text}"</h3> <FormErrors formErrors={this.state.formErrors} /><hr/> Get creative, wax lyrical and respond however you like to the above line of poetry by typing <input placeholder=" in this box" type="text" onChange={this.handleInputChange} name="poemInput"/> - then click <input type="submit" value="here" disabled={!this.state.poemInputValid}/>. Your response, along with the response to your response, along with the next and so on, will altogether contribute to the creation of a collaborative but mostly unseen poetic instance, known forever more as an xQuisite Corpse.<br/>
+
                   </label>
                 </form>)
             : <form autoComplete="off" onSubmit={this.handleEmailSubmit}>
