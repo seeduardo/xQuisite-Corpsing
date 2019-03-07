@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "f91763bb1effefc0d32b",
+    "revision": "33d93d5fa6e2b8e112cb",
     "url": "/xQuisite-Corpsing-FrontEnd/static/css/main.90bd7ba5.chunk.css"
   },
   {
-    "revision": "f91763bb1effefc0d32b",
-    "url": "/xQuisite-Corpsing-FrontEnd/static/js/main.f91763bb.chunk.js"
+    "revision": "33d93d5fa6e2b8e112cb",
+    "url": "/xQuisite-Corpsing-FrontEnd/static/js/main.33d93d5f.chunk.js"
   },
   {
     "revision": "7f50a2bc032c0b4d9cf1",
@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/xQuisite-Corpsing-FrontEnd/static/js/runtime~main.e79baadc.js"
   },
   {
-    "revision": "fe61288d243e62bc6f527e1fd2cfe954",
+    "revision": "a25a9ac72a8e020b61b3d5839aa2f8d3",
     "url": "/xQuisite-Corpsing-FrontEnd/index.html"
   }
 ];
