@@ -5,7 +5,7 @@ import initialData from './initialData'
 
 // const floatingMan = 'https://us.123rf.com/450wm/eraxion/eraxion1110/eraxion111000546/11073159-highlighted-vascular-system-.jpg?ver=6'
 
-const floatingMan = '%PUBLIC_URL%/organAndFloatingManImages/FloatingMan.jpg'
+const floatingMan = '/xQuisite-Corpsing-FrontEnd/organAndFloatingManImages/FloatingMan.jpg'
 
 class FloatingMan extends Component {
 
