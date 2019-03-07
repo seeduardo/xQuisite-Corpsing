@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Poem from './Poem'
 
-const apiBaseUrl = 'http://localhost:3000/api/v1/'
+const apiBaseUrl = 'https://xquisite-corpsing.herokuapp.com/api/v1/'
 
 class PoemContainer extends Component {
 
