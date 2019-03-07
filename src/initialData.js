@@ -1,6 +1,6 @@
 import React from 'react';
 
-const imgUrlRoot = '/xQuisite-Corpsing-FrontEnd/organAndFloatingManImages/'
+const imgUrlRoot = '/xQuisite-Corpsing/organAndFloatingManImages/'
 
 const initialData = [
   {

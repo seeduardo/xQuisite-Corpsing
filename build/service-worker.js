@@ -14,7 +14,11 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/xQuisite-Corpsing-FrontEnd/precache-manifest.4f228e76014f76af23ef7229a689cc3e.js"
+<<<<<<< HEAD
+  "/xQuisite-Corpsing/precache-manifest.83637704d7e24449ae6b3afd2a1bce1d.js"
+=======
+  "/xQuisite-Corpsing-FrontEnd/precache-manifest.be2ab9acca531386556bbba437687c07.js"
+>>>>>>> 85765055f7be6dd6c1d3c4ff19292fcf5c8a845c
 );
 
 workbox.clientsClaim();
@@ -28,7 +32,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/xQuisite-Corpsing-FrontEnd/index.html", {
+workbox.routing.registerNavigationRoute("/xQuisite-Corpsing/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
