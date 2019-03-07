@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## xQuisite Corpsing
 
-## Available Scripts
+Welcome to xQuisite Corpsing, an experimental, left-field way of learning about the human body, as well as getting the creative, poetic juices flowing. You can visit the deployed app and get started straight away [here](romen-reyes-peschl.com/xQuisite-Corpsing), or you can read on here to find out a bit more, but my suggestion is you go look at the project 'cold', so to speak, with no clues as to how to use it or, indeed, what it even does (if anything) - this is entirely within the exploratory, educational and hopefully mysterious spirit of the project.
 
-In the project directory, you can run:
+### `Current Build`
 
-### `npm start`
+xQuisite Corpsing is currently optimized for desktop use, and via the Chrome browser.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### `Instructions`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+![Alt text](public/organAndFloatingManImages/FloatingMan.jpg?raw=true "Floating Man")
 
-### `npm test`
+As mentioned above, the idea is for you to find out for yourself what to do. There is a serene figure floating in front of you on the screen - moving your cursor in conjunction with said figure might be a decent opening gambit. If all else fails, just don't do anything, wait a bit and see if you get any clues (and here's a clue: you will, but you have to be patient and pay attention).
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Tech Used`
 
-### `npm run build`
+* FrontEnd: React.js (starting with create-react-app)
+* Backend: Ruby on Rails (limited to API, the repo for which, can be found [here](https://github.com/seeduardo/xQuisite-Corpsing-API))
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `Credits`
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The Floating Man image (my name for it, so not official) was created by [SciePro](https://sciepro.com/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All other images were created by Jacques Fabien Gautier d'Agoty (1716-1785), and provided by the [Wellcome Collection](https://wellcomecollection.org/works).
 
-### `npm run eject`
+All quotations were sourced by me, and authors are credited as such in the appropriate places.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+All other content was written by me.
