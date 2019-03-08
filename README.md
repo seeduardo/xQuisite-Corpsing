@@ -4,7 +4,7 @@ Welcome to xQuisite Corpsing, an experimental, left-field way of learning about 
 
 ### `Current Build`
 
-xQuisite Corpsing is currently optimized for desktop use, and via the Chrome browser.
+xQuisite Corpsing is currently optimized for desktop/laptop use - without wanting to give too much away, productive and fun exploration of the app requires a cursor, so mobile/tablet/touchscreen use is discouraged (unless of course with an external aid like a usb mouse or some such, but this seems unlikely).
 
 ### `Instructions`
 

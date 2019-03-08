@@ -1,27 +1,13 @@
 {
-<<<<<<< HEAD
-  "main.css": "/xQuisite-Corpsing/static/css/main.90bd7ba5.chunk.css",
-  "main.js": "/xQuisite-Corpsing/static/js/main.3b29e32c.chunk.js",
-  "main.js.map": "/xQuisite-Corpsing/static/js/main.3b29e32c.chunk.js.map",
+  "main.css": "/xQuisite-Corpsing/static/css/main.a4ba1eb6.chunk.css",
+  "main.js": "/xQuisite-Corpsing/static/js/main.3ff35c02.chunk.js",
+  "main.js.map": "/xQuisite-Corpsing/static/js/main.3ff35c02.chunk.js.map",
   "static/js/1.7f50a2bc.chunk.js": "/xQuisite-Corpsing/static/js/1.7f50a2bc.chunk.js",
   "static/js/1.7f50a2bc.chunk.js.map": "/xQuisite-Corpsing/static/js/1.7f50a2bc.chunk.js.map",
   "runtime~main.js": "/xQuisite-Corpsing/static/js/runtime~main.9db14cac.js",
   "runtime~main.js.map": "/xQuisite-Corpsing/static/js/runtime~main.9db14cac.js.map",
-  "static/css/main.90bd7ba5.chunk.css.map": "/xQuisite-Corpsing/static/css/main.90bd7ba5.chunk.css.map",
+  "static/css/main.a4ba1eb6.chunk.css.map": "/xQuisite-Corpsing/static/css/main.a4ba1eb6.chunk.css.map",
   "index.html": "/xQuisite-Corpsing/index.html",
-  "precache-manifest.83637704d7e24449ae6b3afd2a1bce1d.js": "/xQuisite-Corpsing/precache-manifest.83637704d7e24449ae6b3afd2a1bce1d.js",
+  "precache-manifest.0f504b2e5896cdfb335406d074d9926f.js": "/xQuisite-Corpsing/precache-manifest.0f504b2e5896cdfb335406d074d9926f.js",
   "service-worker.js": "/xQuisite-Corpsing/service-worker.js"
-=======
-  "main.css": "/xQuisite-Corpsing-FrontEnd/static/css/main.90bd7ba5.chunk.css",
-  "main.js": "/xQuisite-Corpsing-FrontEnd/static/js/main.33d93d5f.chunk.js",
-  "main.js.map": "/xQuisite-Corpsing-FrontEnd/static/js/main.33d93d5f.chunk.js.map",
-  "static/js/1.7f50a2bc.chunk.js": "/xQuisite-Corpsing-FrontEnd/static/js/1.7f50a2bc.chunk.js",
-  "static/js/1.7f50a2bc.chunk.js.map": "/xQuisite-Corpsing-FrontEnd/static/js/1.7f50a2bc.chunk.js.map",
-  "runtime~main.js": "/xQuisite-Corpsing-FrontEnd/static/js/runtime~main.e79baadc.js",
-  "runtime~main.js.map": "/xQuisite-Corpsing-FrontEnd/static/js/runtime~main.e79baadc.js.map",
-  "static/css/main.90bd7ba5.chunk.css.map": "/xQuisite-Corpsing-FrontEnd/static/css/main.90bd7ba5.chunk.css.map",
-  "index.html": "/xQuisite-Corpsing-FrontEnd/index.html",
-  "precache-manifest.be2ab9acca531386556bbba437687c07.js": "/xQuisite-Corpsing-FrontEnd/precache-manifest.be2ab9acca531386556bbba437687c07.js",
-  "service-worker.js": "/xQuisite-Corpsing-FrontEnd/service-worker.js"
->>>>>>> 85765055f7be6dd6c1d3c4ff19292fcf5c8a845c
 }
