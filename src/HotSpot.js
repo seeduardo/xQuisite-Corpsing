@@ -185,7 +185,7 @@ class HotSpot extends Component {
                         : null))
                     : (organ.top > 85
                       ? (this.state.showPopup
-                        ? {top: `${organ.top - 66.6}%`, left: `${organ.left - 27}%`, visibility: "visible", opacity: this.state.popupOpacity}
+                        ? {top: `${organ.top - 75}%`, left: `${organ.left - 27}%`, visibility: "visible", opacity: this.state.popupOpacity}
                         : null)
                       :(this.state.showPopup
                         ? {top: `${organ.top - 50}%`, left: `${organ.left - 27}%`, visibility: "visible", opacity: this.state.popupOpacity}
