@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/xQuisite-Corpsing/precache-manifest.0f504b2e5896cdfb335406d074d9926f.js"
+  "/xQuisite-Corpsing/precache-manifest.a819b70eb6f764ed041951a1fe07fe65.js"
 );
 
 workbox.clientsClaim();
