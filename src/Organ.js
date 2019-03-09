@@ -42,7 +42,7 @@ class Organ extends Component {
   render() {
     const {organ} = this.props
     return (
-      <div style={{opacity: this.state.organOpacity, marginTop: "2vh"}}>
+      <div style={{opacity: this.state.organOpacity, marginTop: "1vh"}}>
         <figure>
           <figcaption>Image by Jacques Fabien Gautier d'Agoty, courtesy of the Wellcome Collection</figcaption>
           <img
